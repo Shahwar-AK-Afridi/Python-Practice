@@ -16,3 +16,7 @@ print_twice(Fname) #"Fname" is the argument over here
 
 lname = input("Enter Your last Name: ")
 print_thrice(lname) #"lname" is the argument over here
+
+#Argument = Expression
+print_thrice("\tSpam\t" * 4)
+print_thrice(3*5)
