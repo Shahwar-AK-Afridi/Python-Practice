@@ -1,4 +1,4 @@
-
+"""Print user name the according to user input by using while loop and function print_name"""
 
 name = input("Enter Your Name:")
 times = input("Printing Number:")
@@ -12,8 +12,6 @@ def print_name(name,num):
         count = count + 1
     print("Thank You")
     print("We printed Your name %d times" %count)
-    sexy = 7
-    return sexy
+    return
 
-yoyo = print_name(name,num)
-print(yoyo)
+print_name(name,num)
