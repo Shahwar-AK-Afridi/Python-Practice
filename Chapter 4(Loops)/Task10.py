@@ -1,10 +1,10 @@
 """"Search an item Using Boolean Variable"""
 
-found = False
-number = [9,41,12,3,74,15]
+number = [9,41,12,3,74,15,98,44,57,32,16]
 for obj in number:
+    found = False        #Boolean Variable
     if obj == 3:
         found = True
-        print("%f is Found: %s" %(obj, found))
+        print("Number is %d so Found: %s" %(obj, found))
     else:
-        continue
+        print("Number is %d so %s" %(obj, found))
