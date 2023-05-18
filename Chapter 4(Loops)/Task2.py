@@ -1,3 +1,5 @@
+"""Print the name of user according to user input"""
+
 name = input("Enter Your Name:")
 times = input("Printing Number:")
 num = int(times)
