@@ -1,4 +1,4 @@
-"""Practising Strings"""
+"""Practicing Strings"""
 
 #First
 print("Using index operator to display the character of a string")
@@ -16,7 +16,7 @@ print(letter)
 print("----------------------------------------------------------")
 
 #Third
-print("Getting charaters of string using negative indices")
+print("Getting characters of string using negative indices")
 season = "summers"
 letter = season[-1]
 letter2 = season[-7]
@@ -47,7 +47,16 @@ fruit="banana"
 count = 0
 for char in fruit:
     if char == "a":
-        count = count + 1
+        count = count + 1          #Count is incremented each time an "a" is found
     else:
         continue
 print("The character a appeared: %d" %count + " times")
+print("----------------------------------------------------------")
+
+#Seventh
+print("Use Of (in) operator")
+fruit = "Mango"
+answer = "a" in fruit
+print("Character a is present:", answer)
+answer2 = "b" in fruit
+print("Character b is present:" ,answer2)
