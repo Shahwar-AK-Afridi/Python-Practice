@@ -9,7 +9,7 @@ print("----------------------------------------------------------")
 
 #Second
 print("How to get documentation on a method")
-help(char.strip)                         #Describe the use of find
+help(char.find)                         #Describe the use of find
 print("----------------------------------------------------------")
 
 #Third
