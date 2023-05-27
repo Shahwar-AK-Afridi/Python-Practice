@@ -1,0 +1,7 @@
+I have created file using (w) mode
+Mode (w) will create a new file, if it doesnot exist
+If file exists, it will overwrite the existing content
+----------------------------------------
+I have appended this line in file2.txt
+Appends add content to the end of the file
+File object keeps track of where it is, so if you write again it adds the new data to the end
