@@ -1,0 +1,2 @@
+I have overwritten the file1 using mode(w)
+I am a software Engineer
