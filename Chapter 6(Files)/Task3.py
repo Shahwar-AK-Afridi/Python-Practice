@@ -1,65 +1,69 @@
-"""Write a program that prompts for a file name, then opens that file and reads through the file, looking for lines of the form:
+"""Practicing File Handling By Taking Input from Users"""
+"""1)Using input() to read user's data
+   2)Using try & catch to deal with exceptions"""
 
-X-DSPAM-Confidence:0.8475
-
-Count these lines and extract the floating point values from each of the lines and
-compute the average of those values and produce an output as shown below.
-Do not use the sum() function or a variable named sum in your solution."""
-
-print("---------------------------Approach 1------------------------------------------")
+#First(Same as Third One)
+print("Asking user for file name and then searching for string (@uct.ac.za) in the file")
 try:
-    fname = input("Enter file name Again: ")
+    fname = input("Enter The File Name:")                           #We read filename from user and assigned it to variable "fname"
+    fhand = open(fname, "r")                                        #Checks if file exist of not, if exist then returns "filehandler" to fhand
+except:
+    print("Incorrect File Name, Please Enter The File Name Again!")
+    quit()
+
+for line in fhand:
+    if "@uct.ac.za" in line:
+        line2 = line.rstrip()
+        print(line2)
+    else:
+        continue
+fhand.close()
+print("----------------------------------------------------------")
+
+#Second
+print("Asking user for file name and then searching lines that starts with(From)")
+try:
+    fname = input("Enter The File Name:")
     fhand = open(fname,"r")
 except:
-    print("Enter Correct File Name")
-    quit()                                          #quit() same as exit()
-
-count = 0
-total = 0
+    print("Incorrect File Name, Please Enter The File Name Again!")
+    quit()
 for line in fhand:
-    line2 = line.rstrip()                           #Removes the right-most non-printing characters "\n"
-    if line2.find("X-DSPAM-Confidence") == -1:
-        continue
-    else:
+    if line.startswith("From"):
+        line2 = line.rstrip()
         print(line2)
-        count += 1
-        extract_string = line2[19:]
-        extract_float = float(extract_string)
-        total = total + extract_float               #Running Total
-        print(extract_string)
-
-print("Total Number of Lines: %d" %count)
-print("Sum of All Numbers: %g" %total)
-print("-----Calculating Average-----")
-avg = total/count
-print("Average spam confidence:", avg)
+    else:
+        continue
 fhand.close()
+print("----------------------------------------------------------")
 
-
-print("---------------------------Approach 2--------------------------------------")
+#Third(Same as First One)
+print("Asking user for file name and then searching lines that have (@uct.ac.za) in that")
 try:
-    fname = input("Enter file name Again: ")
-    fh = open(fname,"r")
+    fname = input("Enter The File Name:")
+    fhand = open(fname, "r")
 except:
-    print("Enter Correct File Name")
-    exit()                                          #exit() same as quit()
-
-count = 0
-total = 0
-for line in fh:
-    line2 = line.rstrip()
-    if not line2.startswith("X-DSPAM-Confidence:"):  #"not" reverses the result
-        continue
-    else:
+    print("Incorrect File Name, Please Enter The File Name Again!")
+    quit()
+for line in fhand:
+    if not line.find("@uct.ac.za") == -1:
+        line2 = line.rstrip()
         print(line2)
-        count += 1
-        extract_string = line2[19:]
-        extract_float = float(extract_string)
-        total = total + extract_float
-
-print("Total Number of Lines: %d" %count)
-print("Sum of All Numbers: %g" %total)
-print("-----Calculating Average-----")
-avg = total/count
-print("Average spam confidence:", avg)
+    else:
+        continue
 fhand.close()
+print("----------------------------------------------------------")
+
+#fourth
+print("Asking user for file name and then searching for (@) with read() method")
+try:
+    fname = input("Enter The File Name:")
+    fhand = open(fname, "r")
+except:
+    print("Incorrect File Name, Please Enter The File Name Again!")
+    quit()
+inp = fhand.read()
+at_sign_post = inp.find("@")
+print(at_sign_post)
+fhand.close()
+print("----------------------------------------------------------")
