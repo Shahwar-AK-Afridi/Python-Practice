@@ -12,7 +12,7 @@ If the user enters a value out of range, print a suitable error message and exit
 
 try:
     marks = input("Enter Score: ")
-    score = float(marks)
+    score = float(marks)                                                #First validation: Checks if input is integer or not by Converting into float
 except:
     print("Bad Score")
     quit()
@@ -34,7 +34,7 @@ def computegrade(score):
         #print("F")
         return "F"
     else:
-        print("Enter Score Between 0.0 and 1.0")
+        print("Enter Score Between 0.0 and 1.0")                       #Second validation: Checks if score given by user is between 0.0 and 1.0 or not
         quit()
 
 result = computegrade(score)
