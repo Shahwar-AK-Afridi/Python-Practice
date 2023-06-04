@@ -2,7 +2,7 @@
 """1)Creating lists
    2)Calculating the Length Of List using (len() & for loop)
    3)Type of list using (type())
-   4)Creating list using (list[] constructor)
+   4)Creating list using (list() constructor)
    5)Combining list using (+) operator
    6)Repeats a list using (*) operator
    7)Accessing list elements using bracket/index operator[](Positive Index Value) & Slice[:] operator
