@@ -2,7 +2,8 @@
 """1)Adding items in the list using append() method
    2)Adding an item at the specified index using insert() method
    3)Adding elements from another list to the current list using extend() method & (+) operator
-   4)Creating an empty list and then add elements one by one to it using list() constructor & append() method"""
+   4)Creating an empty list and then add elements one by one to it using list() constructor & append() method
+   5)Adding item in a list using slice[:] operator"""
 
 #First
 print("=>(1)Adding items in the list using append() method")
@@ -49,3 +50,24 @@ stuff.append("OPPO")
 stuff.append("Vivo")
 print("After:", stuff)
 print("----------------------------------------------------------")
+
+#Fifth
+print("=>(5)Adding item in a list using slice[:] operator")
+
+print("-------------Case 1 (item inserted = item replaced)--------------")
+company = ["Hp", "Lenovo", "Toshiba", "Dell", "ASUS", "Acer", "Samsung"]        #list is mutable
+print("Before:", company)
+company[0:3] = ["mango", "banana", "dragonfruit"]
+print("After:", company)
+
+print("-------------Case 2 (item inserted > item replaced)--------------")
+company = ["Hp", "Lenovo", "Toshiba", "Dell", "ASUS", "Acer", "Samsung"]        #list is mutable
+print("Before:", company)
+company[0:2] = ["mango", "banana", "dragonfruit"]
+print("After:", company)
+
+print("-------------Case 3 (item inserted < item replaced)--------------")
+company = ["Hp", "Lenovo", "Toshiba", "Dell", "ASUS", "Acer", "Samsung"]        #list is mutable
+print("Before:", company)
+company[0:6] = ["mango"]
+print("After:", company)
