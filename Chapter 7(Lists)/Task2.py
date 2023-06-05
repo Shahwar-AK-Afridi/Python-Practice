@@ -1,4 +1,4 @@
-"""Practicing List's Methods"""
+"""Practicing List's Methods for adding items"""
 """1)Adding items in the list using append() method
    2)Adding an item at the specified index using insert() method
    3)Adding elements from another list to the current list using extend() method & (+) operator
