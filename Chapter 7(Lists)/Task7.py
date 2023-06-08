@@ -1,8 +1,7 @@
 """Parsing Strings"""
-"""1)From string to list of characters using list() constructor/function
-   2)From string to list of words/parts using split() method
-   3)From string to list of words/parts using split() method with delimiter
-   4)From list of words/parts to string using join() method & delimiter"""
+"""Open the file romeo.txt and read it line by line. For each line, split the line into a list of words using the split() method.
+   The program should build a list of words. For each word on each line check to see if the word is already in the list and if not append it to the list.
+   When the program completes, sort and print the resulting words in python sort() order as shown in the desired output."""
 
 
 fname = input("Enter The File Name:")
@@ -18,34 +17,3 @@ for line in fhand:
             x.append(element)                        # append
 x.sort()
 print(x)"""
-
-print("-------------Approach 1--------------")
-fname = input("Enter The File Name:")
-fhand = open("mbox-short.txt")
-count = 0
-
-for line in fhand:
-    if line.startswith("From "):
-        line2 = line.rstrip().split()
-        count = count + 1
-        address = line2[1]
-        print(address)
-    else:
-        continue
-print("There were", count, "lines in the file with From as the first word")
-
-print("-------------Approach 2--------------")
-fname = input("Enter file name: ")
-counter = 0
-fh = open(fname)
-
-for line in fh :
-    line = line.rstrip()
-    if not line.startswith('From '):
-        continue
-    else:
-        words = line.split()
-        print (words[1])
-        counter +=1
-
-print ("There were", counter, "lines in the file with From as the first word")
