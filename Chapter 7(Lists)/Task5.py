@@ -1,4 +1,4 @@
-"""Practicing List's Methods for sorting"""
+"""Practicing List's Methods for copying and built-in functions"""
 """1)Copying List using copy() method
    2)Copying List using list() constructor
    3)Using Built-in Functions on lists"""
@@ -43,3 +43,4 @@ print("Minimum:", minimum)
 print("--------PART D (Calculating minimum using sum() function)-----------")
 total = sum(numbers)
 print("Sum:",total)
+print("----------------------------------------------------------")
