@@ -1,4 +1,4 @@
-"""Practicing List's Methods for copying and built-in functions"""
+"""Practicing List's Methods for list and string conversion"""
 """1)From string to list of characters using list() constructor/function
    2)From string to list of words/parts using split() method
    3)From string to list of words/parts using split() method with delimiter
