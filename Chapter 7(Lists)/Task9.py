@@ -161,3 +161,91 @@ for word in sample:
 print("Modified List:", lis)
 print("Modified Length:", len(lis))
 print("----------------------------------------------------------")
+
+print("(7)Write a Python program to check if a list is empty or not.")
+
+empty = []
+if len(empty) == 0:
+    print("Empty List")
+else:
+    print("Full List")
+print("----------------------------------------------------------")
+
+print("(8)Write a Python program to clone or copy a list")
+
+print("----------Approach 1 using for loop to read only----------")
+
+number = [22,44,76,98,56,33,-1,11,23]
+clone = list()
+print("Clone Before:", clone)
+for item in number:
+    clone.append(item)
+print("Clone After:", clone)
+
+print("---------------Approach 2 using copy()------------------")
+
+sample = ['abc', 'xyz', 'aba', '1221']
+clone2 = list()
+print("Clone After:", clone2)
+clone2 = sample.copy()
+print("Clone After:", clone2)
+print("----------------------------------------------------------")
+
+print("(9)Write a Python program to find the list of words that have length longer than the length of the list.")
+
+sentence = "The quick brown fox jumps over the lazy dog"
+
+def word_length(n, sentence):
+    abc = sentence.split()
+    item = []                                                           # Initialize an empty list called 'item'.
+    for word in abc:
+        if len(word) > n:
+            item.append(word)
+        else:
+            continue
+    return item                                                         #This line returns the "item" list, which contains all the words in the input string that have a length greater than n.
+
+no_of_words = word_length(3, sentence)
+print("Word With Length > n:", no_of_words)
+print("----------------------------------------------------------")
+
+print("(10)Write a Python function that takes two lists and returns True if they have at least one common member")
+
+list1 = [2,4,6,3,7,3,6,8,4,3,78]
+list2 = [5,2,5,7,8,95,544,6,8,8]
+list3 = []
+
+def item_comparison(list1, list2):
+    result = False                                                       #he function initializes a Boolean variable "result" to False.
+    for item in range(len(list1)):
+        for element in range(len(list2)):
+            if list1[item] == list2[element]:
+                result = True
+                 #returns "None" if no element is comman
+                return result                                           #If the current element in list1 is equal to the current element in list2, the function sets result to True and immediately returns the result using the return statement.
+            else:                                                       #This means that the function will stop execution as soon as it finds a common element between the two lists.
+                continue
+
+bool = item_comparison(list1, list2)
+print(bool)
+bool2 = item_comparison(list1, list3)
+print(bool2)
+print("----------------------------------------------------------")
+
+print("(11)Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.")
+
+sample = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+#Expected Output : ['Green', 'White', 'Black']
+print("List Before:", sample)
+new = list()
+for item in range(len(sample)):
+    if item == 0:
+        continue
+    elif item == 4:
+        continue
+    elif item == 5:
+        continue
+    else:
+        word = sample[item]
+        new.append(word)
+print("List After:", new)
