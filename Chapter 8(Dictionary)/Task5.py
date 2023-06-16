@@ -1,5 +1,6 @@
-"""Practicing dictionary Methods for copying """
-"""1)Copying dictionary items using => copy() method
+"""Practicing dictionary Methods for copying"""
+"""
+   1)Copying dictionary items using => copy() method
    2)Copying dictionary items using => dict() constructor
 """
 
