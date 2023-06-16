@@ -1,16 +1,18 @@
 """Practicing Dictionaries"""
-"""1)Creating Dictionaries
-   2)Calculating the Length Of dictionaries using (len() & for loop)
-   3)Type of dictionary using (type())
-   4)Accessing dictionary items using bracket opertor[], get(), keys(), values(), item()
-   5)Accessing list elements using bracket/index operator[](Negative Index Value) & Slice[:] operator
-   6)Changing list items using bracket/index[] operator & slice[:] operator
-   7)Traversing a list using for-loop only to (READ only)
-   8)Traversing a list using for-loop with range() & Len() function to (READ, UPDATE & WRITE)
-   9)Searching for elements in a list using (in & not in) operator
-   """
+"""1)Creating Dictionaries using => bracket operator[], dict(), dict_name = {}
+   2)Calculating the Length Of dictionaries using => len() & for loop
+   3)Type of dictionary using => type()
+   4)Accessing dictionary items using => bracket opertor[], get(), keys(), values(), item()
+   5)Changing dictionary items using => bracket operator[] , update()
+   6)Traversing a dictionary using for-loop to print keys
+   7)Traversing a dictionary using for-loop to print values
+   8)Traversing a dictionary using for-loop & values() method to print values
+   9)Traversing a dictionary using for-loop & keys() method to print keys
+  10)Traversing a dictionary using for-loop & item() method with both KEYS & VALUES
+  11)Searching for item in a dictionary using (in & not in) operator"""
+
 #First
-print("=>(1)Creating dictionaries")
+print("=>(1)Creating Dictionaries using => bracket operator[], dict(), dict_name = {}")
 
 print("-------------Approach 1 using dict() constructor--------------")
 intro = dict(Name = "Shahwar", Profession = "Software Engineer", Country = "Pakistan")     #Dictionary constant assigned to "intro"
@@ -29,7 +31,7 @@ print(stuff)
 print("----------------------------------------------------------")
 
 #Second
-print("=>(2)Calculating the Length Of dictionaries using (len() & for loop)")
+print("=>(2)Calculating the Length Of dictionaries using => len() & for loop")
 
 print("-------------Approach 1 using len()-----------------")
 intro = dict(Name = "Shahwar", Profession = "Software Engineer", Country = "Pakistan")
@@ -45,14 +47,14 @@ print("Length:%d" %count)
 print("----------------------------------------------------------")
 
 #Third
-print("=>(3)Type of list using (type())")
+print("=>(3)Type of dictionary using => type()")
 intro = dict(Name = "Shahwar", Profession = "Software Engineer", Country = "Pakistan")
 type = type(intro)
 print(type)
 print("----------------------------------------------------------")
 
 #Fourth
-print("=>(4)Accessing dictionary items")
+print("=>(4)Accessing dictionary items using => bracket opertor[], get(), keys(), values(), item()")
 
 print("-------------Approach 1 using bracket operator[key name]-----------------")
 
@@ -65,7 +67,7 @@ print("Second Car:%s" %toyota)
 print("-------------Approach 2 using get() method-----------------")
 
 car2 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
-model = car2.get("Ford")
+model = car2.get("Model")                       #get() returns "value" of the given "key"
 print("First Model:%s" %model)
 model2 = car2.get("asdf", "Not Available")
 print("Second Model:%s" %model2)
@@ -111,7 +113,82 @@ car5["Year3"] = 2022
 print("After Changes", key_value)           #making changes to the car4 will reflect changes into "dict_items"
 print("----------------------------------------------------------")
 
+#Fifth
+print("=>(5)Changing dictionary items using => bracket operator[] , update()")
 
+print("-------------Approach 1 using bracket operator[key name]-----------------")
+
+car6 = {'Brand': 'Ford', 'Model': 'Mustang', 'Year': 1964, 'Brand2': 'Toyota', 'Model2': 'Corolla', 'Year2': '2019', 'Brand3': 'Suzuki', 'Model3': 'Alto', 'Year3': 2022}
+
+print("Before Changes:", car6)
+car6["Year"] = 2023
+print("After Changes:", car6)
+
+print("-------------Approach 2 using update() method-----------------")
+
+car7 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
+
+print("Before Update:", car7)
+car7.update({"Brand2":"Audi"})          #update() takes key:value pair as argument
+print("After Update:", car7)
+print("----------------------------------------------------------")
+
+#Sixth
+print("=>(6)Traversing a dictionary using for-loop to print keys")
+
+car8 = {'Brand': 'Ford', 'Model': 'Mustang', 'Year': 1964, 'Brand2': 'Toyota', 'Model2': 'Corolla', 'Year2': '2019', 'Brand3': 'Suzuki', 'Model3': 'Alto', 'Year3': 2022}
+
+for key in car8:
+    print("key:", key)
+print("----------------------------------------------------------")
+
+#Seventh
+print("=>(7)Traversing a dictionary using for-loop to print values")
+
+car9 = {'Brand': 'Ford', 'Model': 'Mustang', 'Year': 1964, 'Brand2': 'Toyota', 'Model2': 'Corolla', 'Year2': '2019', 'Brand3': 'Suzuki', 'Model3': 'Alto', 'Year3': 2022}
+
+for key in car9:
+    print("Value:", car9[key])
+print("----------------------------------------------------------")
+
+#Eighth
+print("=>(8)Traversing a dictionary using for-loop & values() method to print values")
+
+car10 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
+
+for value in car10.values():
+    print("Value:", value)
+print("----------------------------------------------------------")
+
+#Ninth
+print("=>(9)Traversing a dictionary using for-loop & keys() method to print keys")
+
+car11 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
+
+for keys in car11.keys():
+    print("Keys:", keys)
+print("----------------------------------------------------------")
+
+#Tenth
+print("=>(10)Traversing a dictionary using for-loop & item() method with both KEYS & VALUES")
+
+car12 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
+
+for key, val  in car12.items():
+    print("Tuple:",key,":", val)
+print("----------------------------------------------------------")
+
+print("(11)Searching for item in a dictionary using (in & not in) operator")
+
+car13 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
+
+if "Model3" in car13:
+    print("Yes, Model2 is in dictionary")
+elif "Year3" not in car13:
+    print("No, Year3 is not in dictionary")
+else:
+    print("ok")
+print("----------------------------------------------------------")
 
 
 
