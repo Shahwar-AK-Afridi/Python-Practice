@@ -1,15 +1,18 @@
 """Practicing Dictionaries"""
-"""1)Creating Dictionaries using => bracket operator[], dict(), dict_name = {}
+"""
+   1)Creating Dictionaries using => bracket operator[], dict(), dict_name = {}
    2)Calculating the Length Of dictionaries using => len() & for loop
    3)Type of dictionary using => type()
    4)Accessing dictionary items using => bracket opertor[], get(), keys(), values(), item()
    5)Changing dictionary items using => bracket operator[] , update()
-   6)Traversing a dictionary using for-loop to print keys
-   7)Traversing a dictionary using for-loop to print values
-   8)Traversing a dictionary using for-loop & values() method to print values
-   9)Traversing a dictionary using for-loop & keys() method to print keys
-  10)Traversing a dictionary using for-loop & item() method with both KEYS & VALUES
-  11)Searching for item in a dictionary using (in & not in) operator"""
+   6)Traversing a dictionary using => for-loop to print keys
+   7)Traversing a dictionary using => for-loop to print values
+   8)Traversing a dictionary using => for-loop & values() method to print values
+   9)Traversing a dictionary using => for-loop & keys() method to print keys
+  10)Traversing a dictionary using => for-loop & item() method with both KEYS & VALUES
+  11)Searching for keys in a dictionary using => (in & not in) operator
+  12)Searching for keys in a dictionary using => (in & not in) operator & values() method
+"""
 
 #First
 print("=>(1)Creating Dictionaries using => bracket operator[], dict(), dict_name = {}")
@@ -134,7 +137,7 @@ print("After Update:", car7)
 print("----------------------------------------------------------")
 
 #Sixth
-print("=>(6)Traversing a dictionary using for-loop to print keys")
+print("=>(6)Traversing a dictionary using => for-loop to print keys")
 
 car8 = {'Brand': 'Ford', 'Model': 'Mustang', 'Year': 1964, 'Brand2': 'Toyota', 'Model2': 'Corolla', 'Year2': '2019', 'Brand3': 'Suzuki', 'Model3': 'Alto', 'Year3': 2022}
 
@@ -143,7 +146,7 @@ for key in car8:
 print("----------------------------------------------------------")
 
 #Seventh
-print("=>(7)Traversing a dictionary using for-loop to print values")
+print("=>(7)Traversing a dictionary using => for-loop to print values")
 
 car9 = {'Brand': 'Ford', 'Model': 'Mustang', 'Year': 1964, 'Brand2': 'Toyota', 'Model2': 'Corolla', 'Year2': '2019', 'Brand3': 'Suzuki', 'Model3': 'Alto', 'Year3': 2022}
 
@@ -152,7 +155,7 @@ for key in car9:
 print("----------------------------------------------------------")
 
 #Eighth
-print("=>(8)Traversing a dictionary using for-loop & values() method to print values")
+print("=>(8)Traversing a dictionary using => for-loop & values() method to print values")
 
 car10 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
 
@@ -161,7 +164,7 @@ for value in car10.values():
 print("----------------------------------------------------------")
 
 #Ninth
-print("=>(9)Traversing a dictionary using for-loop & keys() method to print keys")
+print("=>(9)Traversing a dictionary using => for-loop & keys() method to print keys")
 
 car11 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
 
@@ -170,7 +173,7 @@ for keys in car11.keys():
 print("----------------------------------------------------------")
 
 #Tenth
-print("=>(10)Traversing a dictionary using for-loop & item() method with both KEYS & VALUES")
+print("=>(10)Traversing a dictionary using => for-loop & item() method with both KEYS & VALUES")
 
 car12 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
 
@@ -178,19 +181,28 @@ for key, val  in car12.items():
     print("Tuple:",key,":", val)
 print("----------------------------------------------------------")
 
-print("(11)Searching for item in a dictionary using (in & not in) operator")
+print("(11)Searching for keys in a dictionary using => (in & not in) operator")
 
 car13 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
 
 if "Model3" in car13:
     print("Yes, Model2 is in dictionary")
-elif "Year3" not in car13:
-    print("No, Year3 is not in dictionary")
+elif "Model3" not in car13:
+    print("No, Mo is not in dictionary")
 else:
     print("ok")
 print("----------------------------------------------------------")
 
+print("(12)Searching for values in a dictionary using => (in & not in) operator & values() method")
 
+car14 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
+
+if "Ford" in car14.values():                        #first convert dictionary to a type where it can be converted into dictionary, then use "in" operator
+    print("Yes, Ford is there")
+elif "Ford" not in car14.values():
+    print("No, Ford is not there")
+else:
+    print("ok")
 
 
 """name = input("Enter file:")
