@@ -1,5 +1,6 @@
 """Practicing Dictionary Methods for removing and deleting items"""
-"""1)Removing a specified item from the dictionary using => pop() method
+"""
+   1)Removing a specified item from the dictionary using => pop() method
    2)Removing last item from the dictionary using => popitem() method
    3)Removing item from the dictionary using => del keyword
    4)Deleting a dictionary using => del keyword
