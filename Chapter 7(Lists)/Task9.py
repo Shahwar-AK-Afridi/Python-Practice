@@ -7,7 +7,7 @@
    6)Write a Python program to remove duplicates from a list"""
 
 
-#First
+#1
 print("=>(1)Write a Python program to sum all the items in a list")
 
 number = [22,44,76,98,56,33,75,11,23]
@@ -22,7 +22,7 @@ total = total_sum(number)
 print("Total Sum:%d" %total)
 print("----------------------------------------------------------")
 
-#Second
+#2
 print("=>(2)Write a Python program to multiply all the items in a list.")
 
 number2 = [1,2,3,4,5,6]
@@ -37,7 +37,7 @@ product = product(number2)
 print("Product:%f" %product)
 print("----------------------------------------------------------")
 
-#Third
+#3
 print("=>(3)Write a Python program to get the largest number from a list")
 
 number = [22,44,76,98,56,33,75,11,23]
@@ -66,7 +66,7 @@ print("Largest Item:", largest_so_far)
 
 print("----------------------------------------------------------")
 
-#fourth
+#4
 print("=>(4)Write a Python program to get the smallest number from a list")
 
 number = [22,44,76,98,56,33,-1,11,23]
@@ -95,7 +95,7 @@ smallest_so_far = min(number)
 print("Smallest Item:", smallest_so_far)
 print("----------------------------------------------------------")
 
-#Fifth
+#5
 print("(5)Write a Python program to count the number of strings from a given list of strings, which have length 2 or more and the first and last characters are the same")
 #Sample List : ['abc', 'xyz', 'aba', '1221']
 #Expected Result : 2
@@ -122,7 +122,7 @@ total = match_words(sample)
 print("Total Elements:", total)
 print("----------------------------------------------------------")
 
-#Sixth
+#6
 print("(6)Write a Python program to remove duplicates from a list")
 
 print("----------Approach 1 using for loop to read only----------")
@@ -162,6 +162,7 @@ print("Modified List:", lis)
 print("Modified Length:", len(lis))
 print("----------------------------------------------------------")
 
+#7
 print("(7)Write a Python program to check if a list is empty or not.")
 
 empty = []
@@ -171,6 +172,7 @@ else:
     print("Full List")
 print("----------------------------------------------------------")
 
+#8
 print("(8)Write a Python program to clone or copy a list")
 
 print("----------Approach 1 using for loop to read only----------")
@@ -191,6 +193,7 @@ clone2 = sample.copy()
 print("Clone After:", clone2)
 print("----------------------------------------------------------")
 
+#9
 print("(9)Write a Python program to find the list of words that have length longer than the length of the list.")
 
 sentence = "The quick brown fox jumps over the lazy dog"
@@ -209,6 +212,7 @@ no_of_words = word_length(3, sentence)
 print("Word With Length > n:", no_of_words)
 print("----------------------------------------------------------")
 
+#10
 print("(10)Write a Python function that takes two lists and returns True if they have at least one common member")
 
 list1 = [2,4,6,3,7,3,6,8,4,3,78]
@@ -232,6 +236,7 @@ bool2 = item_comparison(list1, list3)
 print(bool2)
 print("----------------------------------------------------------")
 
+#11(Check)
 print("(11)Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.")
 
 sample = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
@@ -249,3 +254,4 @@ for item in range(len(sample)):
         word = sample[item]
         new.append(word)
 print("List After:", new)
+print("----------------------------------------------------------")
