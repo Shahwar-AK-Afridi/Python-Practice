@@ -1,9 +1,9 @@
 """Practicing dictionary as a set of counters (Histogram)"""
 """
-    1)From list to dictionary using if-else
-    2)From string to dictionary using if-else
-    3)From list to dictionary using get() method
-    4)From string to dictionary using get() method
+    1)From list to dictionary using => if-else
+    2)From string to dictionary using => if-else
+    3)From list to dictionary using => get() method
+    4)From string to dictionary using => get() method
 """
 
 print("=>(1)From list to dictionary using if-else")
