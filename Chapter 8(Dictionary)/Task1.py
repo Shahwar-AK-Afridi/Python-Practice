@@ -12,6 +12,8 @@
   10)Traversing a dictionary using => for-loop & item() method with both KEYS & VALUES
   11)Searching for keys in a dictionary using => (in & not in) operator
   12)Searching for keys in a dictionary using => (in & not in) operator & values() method
+  13)Creating Nested Dictionaries
+  14)Accessing dictionary items
 """
 
 #First
@@ -181,7 +183,7 @@ for key, val  in car12.items():
     print("Tuple:",key,":", val)
 print("----------------------------------------------------------")
 
-print("(11)Searching for keys in a dictionary using => (in & not in) operator")
+print("=>(11)Searching for keys in a dictionary using => (in & not in) operator")
 
 car13 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
 
@@ -193,7 +195,7 @@ else:
     print("ok")
 print("----------------------------------------------------------")
 
-print("(12)Searching for values in a dictionary using => (in & not in) operator & values() method")
+print("=>(12)Searching for values in a dictionary using => (in & not in) operator & values() method")
 
 car14 = {"Brand":"Ford", "Model":"Mustang","Year":1964, "Brand2":"Toyota", "Model2":"Corolla","Year2":"2019"}
 
@@ -203,33 +205,63 @@ elif "Ford" not in car14.values():
     print("No, Ford is not there")
 else:
     print("ok")
+print("----------------------------------------------------------")
 
+print("=>(13)Creating Nested Dictionaries")
 
-"""name = input("Enter file:")
-handle = open(name)
-count = dict()
-for line in handle:
-    line2 = line.strip()
-    if line2.startswith("From "):
-        words = line2.split()
-        words = words[1:2]
-        #print(words)
-        for word in words:
-            if word not in count:
-                count[word] = 1
-            else:
-                count[word] = count[word] + 1
-    else:
-        continue
-print(count)
+print("-------------Approach 1 Create 3 dictionaries, then add them to 1 big dictionary-----------------")
 
-bigcount = None
-bigword = None
-for key,value in count.items():
-    if bigcount == None or value > bigcount:
-        bigcount = value
-        bigword = key
-    else:
-        continue
-print(bigword, bigcount)
-"""
+child1 = {                              #1st child Dictionary
+    "name":"Shahwar Afridi",
+    "year":1999
+}
+
+child2 = {                              #2nd child Dictionary
+    "name":"Smith",
+    "year": 2010
+}
+
+child3 = {                              #3rd child Dictionary
+    "name":"John",
+    "year":2000
+}
+
+myfamily = {                            #Parent Dictionary
+    "kid1":child1,
+    "kid2":child2,
+    "kid3":child3
+}
+print(myfamily)
+
+print("-------------Approach 2 creating nested dictionary from start-----------------")
+
+myfamily2 = {
+    "child1" :{
+    "name":"Shahwar Afridi",
+    "year":1999
+    },
+    "child2":{
+    "name":"Smith",
+    "year":2010
+    },
+    "child3":{
+    "name":"pinapple",
+    "year":2010
+    }
+}
+
+print(myfamily2)
+print("----------------------------------------------------------")
+
+print("=>(14)Accessing dictionary items")
+
+#Accessing from Approach 1
+print("----------Accessing from Approach 1----------")
+print(myfamily["kid1"])
+print(myfamily["kid2"]["name"])
+
+#Accessing from Approach 2
+print("----------Accessing from Approach 2----------")
+print(myfamily2["child1"])
+print(myfamily2["child2"]["name"])
+print("----------------------------------------------------------")
