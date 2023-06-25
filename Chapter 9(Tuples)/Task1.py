@@ -106,19 +106,19 @@ print("=>(5)Tuple Assignment => packing tuples")
 #here we place tuple on the left-side of the assignment statement
 #When we normally assign values to a tuple, this is called "Packing" a tuple.
 
-print("-------------Approach 1 assigning multiple values to a single variable--------------")
+print("-------------PART A (assigning multiple values to a single variable)--------------")
 
 fruit3 = ("apple", "banana", "mango", "kiwi", "appricot", "dragon fruit")          #packing a tuple
 print(fruit3)
 
-print("-------------Approach 2 assigning multiple values to multiple variables--------------")
+print("-------------PART B (assigning multiple values to multiple variables)--------------")
 
 #No of variables on left == No of values on right
 (x,y) = (4, "fred")       # x = 4                                                  #AKA Simultaneous Assignment Statement
 print("x:",x)             # y = "fred"
 print("y:",y)
 
-print("-------------Approach 3 assigning list to tuple of variable--------------")
+print("-------------PART C (assigning list to tuple of variable)--------------")
 
 lst = ["apple", "mango", "orange"]
 (f1,f2,f3) = lst
@@ -126,7 +126,7 @@ print("Fruit 1:", f1)               # f1 = lst[0]
 print("Fruit 2:", f2)               # f2 = lst[1]
 print("Fruit 3:", f3)               # f3 = lst[2]
 
-print("-------------Approach 4 assigning expression to tuple of variable--------------")
+print("-------------PART D (assigning expression to tuple of variable--------------")
 
 address = "monty@python.org"
 (uname, domain) = address.split("@")          #split returns a list ["monty", "python.org"]
@@ -139,7 +139,7 @@ print("=>(6)Tuple Assignment => Unpacking tuples")
 
 #When we extract values back into variables, this is called "Unpacking" a tuple.
 
-print("-------------Approach 1 (No of variable == No of values)--------------")
+print("-------------PART A (No of variable == No of values)--------------")
 
 #left-Side = tuple of variables
 #Right-Side = tuple of values
@@ -150,7 +150,7 @@ print("f1:", f1)
 print("f2:", f2)
 print("f3:", f3)
 
-print("-------------Approach 2 (No of variable < No of values)--------------")
+print("-------------PART B (No of variable < No of values)--------------")
 
 print("---Adding Asterisk * to the last variable---")
 (f1,f2,*f3) = ("apple", "banana", "mango", "kiwi", "appricot", "dragon fruit")
