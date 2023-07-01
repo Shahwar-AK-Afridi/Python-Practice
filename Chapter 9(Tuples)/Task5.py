@@ -1,7 +1,9 @@
 """Practicing Tuples for copying and built-in functions"""
-"""1)Copying Tuples using => copy() method
+"""
+   1)Copying Tuples using => copy() method
    2)Copying Tuples using => tuples() constructor
-   3)Using Built-in Functions on Tuples"""
+   3)Using Built-in Functions on Tuples
+"""
 
 #First
 print("=>(1)Copying a tuple using copy() method")
