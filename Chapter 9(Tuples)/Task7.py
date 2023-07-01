@@ -13,9 +13,7 @@ for line in fhand:
 for key, val in count.items():
     lst.append((val, key))              #here we will get a list of tuple in "value:key" order
 
-
 lst = sorted(lst, reverse = True)       #here we will get list sorted in descending order
-
 
 for val, key in lst[:10]:               #returns a list of tuples with only 10 tuples
     print(key, val)
