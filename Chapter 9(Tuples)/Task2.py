@@ -1,8 +1,9 @@
 """Practicing Tuples for adding items & Changing Items"""
 """
    1)Convert Tuple => To List => append() to add items => Convert Back To Tuple
-   2)Add tuple to tuple
+   2)Add tuple to tuple using => + operator
    3)Convert Tuple => To List => bracket operator[] to change item => Convert Back To Tuple
+   4)Adding more than one items in a single line
 """
 
 #First
@@ -30,7 +31,7 @@ print("Tuple Before Adding:", name)
 
 add = ("cena",)
 
-name = name + add
+name = name + add                                        # name = name + ("cena",)
 print("Tuple After Adding:", name)
 print("----------------------------------------------------------")
 
@@ -53,3 +54,22 @@ print("After Changing List:", lst)
 Vegatable = tuple(lst)
 print("Tuple After Changing:", Vegatable)
 print("----------------------------------------------------------")
+
+#Fourth
+print("=>(4)Adding more than one items in a single line")
+
+vegatable = ("Lemon", "Tomato", "Cucumber", "Onion")
+
+vegetable = vegatable + ("mango", "banana", "watermelon")
+
+print(vegetable)
+print("----------------------------------------------------------")
+
+#Fifth
+print("=>(5)Adding items in a specific index")
+
+sample = ('Lemon', 'Tomato', 'Cucumber', 'Onion', 'mango', 'banana', 'watermelon')
+
+sample = sample[:2] + ("john", "Charles") + sample[2:]
+
+print(sample)
