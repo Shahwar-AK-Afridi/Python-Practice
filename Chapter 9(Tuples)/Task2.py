@@ -1,9 +1,10 @@
 """Practicing Tuples for adding items & Changing Items"""
 """
    1)Convert Tuple => To List => append() to add items => Convert Back To Tuple
-   2)Add tuple to tuple using => + operator
+   2)Add tuple to tuple using => (+) operator
    3)Convert Tuple => To List => bracket operator[] to change item => Convert Back To Tuple
    4)Adding more than one items in a single line
+   5)Adding items in a specific index using => bracket operator[] & (+) operator
 """
 
 #First
@@ -24,7 +25,7 @@ print("Tuple After Adding:", fruit)
 print("----------------------------------------------------------")
 
 #Second
-print("=>(2)Add tuple to tuple")
+print("=>(2)Add tuple to tuple using => (+) operator")
 
 name = ("John", "Smith", "Charles", "Harry")
 print("Tuple Before Adding:", name)
@@ -66,10 +67,11 @@ print(vegetable)
 print("----------------------------------------------------------")
 
 #Fifth
-print("=>(5)Adding items in a specific index")
+print("=>(5)Adding items in a specific index using => bracket operator[] & (+) operator")
 
 sample = ('Lemon', 'Tomato', 'Cucumber', 'Onion', 'mango', 'banana', 'watermelon')
 
 sample = sample[:2] + ("john", "Charles") + sample[2:]
 
 print(sample)
+print("----------------------------------------------------------")
