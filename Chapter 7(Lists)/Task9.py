@@ -1,11 +1,22 @@
 """Practicing List's Questions"""
-"""1)Write a Python program to sum all the items in a list.
+"""
+   1)Write a Python program to sum all the items in a list.
    2)Write a Python program to multiply all the items in a list.
    3)Write a Python program to get the largest number from a list
    4)Write a Python program to get the smallest number from a list
    5)Write a Python program to count the number of strings from a given list of strings, which have length 2 or more and the first and last characters are the same
-   6)Write a Python program to remove duplicates from a list"""
-
+   6)Write a Python program to remove duplicates from a list
+   7)Write a Python program to check if a list is empty or not
+   8)Write a Python program to clone or copy a list
+   9)Write a Python program to find the list of words that have length longer than the length of the list.
+  10)Write a Python function that takes two lists and returns True if they have at least one common member
+  11)Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.
+  12)Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
+  13)Write a Python program to print the numbers of a specified list after removing even numbers from it.
+  14)Write a Python program to shuffle and print a specified list.
+  15)Write a Python program to generate and print a list of the first and last 5 elements where the values are square numbers between 1 and 30 (both included).
+"""
+import random
 
 #1
 print("=>(1)Write a Python program to sum all the items in a list")
@@ -237,7 +248,7 @@ print(bool2)
 print("----------------------------------------------------------")
 
 #11(Check)
-print("(11)Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.")
+print("=>(11)Write a Python program to print a specified list after removing the 0th, 4th and 5th elements.")
 
 sample = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 #Expected Output : ['Green', 'White', 'Black']
@@ -254,4 +265,68 @@ for item in range(len(sample)):
         word = sample[item]
         new.append(word)
 print("List After:", new)
+print("----------------------------------------------------------")
+
+#12
+print("=>(12)Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.")
+
+sample = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+#Expected Result : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]")
+
+new = list()
+for key, val in sample:                                                #creating "new" list with value:key pairs
+    new.append((val,key))
+
+sample.clear()                                                         #clearing the elements of "sample" list
+
+print("Before Sorting:", new)
+new = sorted(new)                                                      #sorting based on "value"
+
+for val, key in new:
+    sample.append((key,val))                                           #appending the sorted list of tuples to the "sample"
+
+print("After Sorting:", sample)
+print("----------------------------------------------------------")
+
+#13
+print("=>(13)Write a Python program to print the numbers of a specified list after removing even numbers from it.")
+
+num = [7,8,120,25,44,20,27]
+new = list()
+
+for item in num:
+    if item % 2 == 0:                                                   #If an element is odd (i.e., its remainder when divided by 2 is not equal to zero), it is included in the new list.
+        continue
+    else:
+        new.append(item)
+print(new)
+print("----------------------------------------------------------")
+
+#14
+print("=>(14)Write a Python program to shuffle and print a specified list.")
+
+color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+random.shuffle(color)                                                   #The shuffle() method takes a sequence, like a list, and reorganize the order of the items.
+print(color)
+print("----------------------------------------------------------")
+
+#15
+print("=>(15)Write a Python program to generate and print a list of the first and last 5 elements where the values are square numbers between 1 and 30 (both included).")
+
+i = 1
+squared_num = list()
+new = list()
+
+while i <= 30:
+    square = i * i
+    squared_num.append(square)
+    i = i + 1
+
+print("List Of Squared Number:", squared_num)
+
+for item in squared_num:
+    if item in squared_num[0:5] or item in squared_num[-5:]:
+        new.append(item)
+
+print("Final List with 5 Elements:", new)
 print("----------------------------------------------------------")
