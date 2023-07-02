@@ -110,3 +110,4 @@ thisdict = {"apple": 10, "mango": 20, "banana": 30, "dragonfruit": 40, "peach": 
 
 for key,val in thisdict.items():
     print("%s : %d" %(key, val))
+print("----------------------------------------------------------")
