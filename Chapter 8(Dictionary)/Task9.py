@@ -5,9 +5,16 @@
     3)Write a Python script to concatenate the following dictionaries to create a new one.
     4)Write a Python script to check whether a given key already exists in a dictionary
     5)Write a Python program to iterate over dictionaries using for loops.
+    6)Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x).
+    7)Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are the square of the keys
+    8)Write a Python script to merge two Python dictionaries
+    9)Write a Python program to iterate over dictionaries using for loops.
+   10)Write a Python program to sum all the items in a dictionary.
 
 
 """
+
+import math
 #1
 print("=>(1)Write a Python script to sort (ascending and descending) a dictionary by value")
 
@@ -110,4 +117,63 @@ thisdict = {"apple": 10, "mango": 20, "banana": 30, "dragonfruit": 40, "peach": 
 
 for key,val in thisdict.items():
     print("%s : %d" %(key, val))
+print("----------------------------------------------------------")
+
+#6
+print("=>(6)Write a Python script to generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x).")
+
+#Sample Dictionary (n = 5) :
+#Expected Output : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+mul = dict()
+n = 5
+for item in range(1, n+1):
+    mul[item] = item * item
+
+print("Expected Output:", mul)
+print("----------------------------------------------------------")
+
+#7
+print("=>(7)Write a Python script to print a dictionary where the keys are numbers between 1 and 15 (both included) and the values are the square of the keys")
+
+mul = dict()
+for item in range(1, 16):
+    mul[item] = math.pow(item,2)                  # mul[item] = item**2
+
+print("Expected Output:", mul)
+
+print("----------------------------------------------------------")
+
+#8
+print("=>(8)Write a Python script to merge two Python dictionaries")
+
+fruit = {"apple":67, "banana":23, "mango":22}
+vegetable = {"tomato":22, "onion":44, "potato":46}
+
+eat = fruit.copy()
+eat.update(vegetable)
+print("Merged Dictionary:", eat)
+
+print("----------------------------------------------------------")
+
+#9
+print("=>(9)Write a Python program to iterate over dictionaries using for loops.")
+
+sample = {"tomato":22, "apple":67, "mango":22, "potato":46, "onion":44, "banana":23}
+
+for item in sample:
+    print(item)
+
+print("----------------------------------------------------------")
+
+#10
+print("=>(10)Write a Python program to sum all the items in a dictionary.")
+
+sample = {"tomato":22, "apple":67, "mango":22, "potato":46, "onion":44, "banana":23}
+
+val = sample.values()
+
+add_values = sum(val)
+print("Sum Of Values:", add_values)
+
 print("----------------------------------------------------------")
