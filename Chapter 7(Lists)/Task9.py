@@ -15,6 +15,13 @@
   13)Write a Python program to print the numbers of a specified list after removing even numbers from it.
   14)Write a Python program to shuffle and print a specified list.
   15)Write a Python program to generate and print a list of the first and last 5 elements where the values are square numbers between 1 and 30 (both included).
+  16)Write a Python program to check if each number is prime in a given list of numbers. Return True if all numbers are prime otherwise False.
+  17)Write a Python program to generate all permutations of a list in Python.
+  18)Write a Python program to calculate the difference between the two lists.Write a Python program to access the index of a list.
+  19)Write a Python program to access the index & corresponding value of a list
+  20)Write a Python program to convert a list of characters into a string.
+  21)Write a Python program to find the index of an item in a specified list
+  22)Write a Python program to flatten a shallow list.
 """
 import random
 
@@ -329,4 +336,116 @@ for item in squared_num:
         new.append(item)
 
 print("Final List with 5 Elements:", new)
+print("----------------------------------------------------------")
+
+#16
+print("=>(16)Write a Python program to check if each number is prime in a given list of numbers. Return True if all numbers are prime otherwise False.")
+
+"""
+Sample Data:
+([0, 3, 4, 7, 9]) -> False
+([3, 5, 7, 13]) -> True
+([1, 5, 3]) -> False
+"""
+
+lst = [1, 5, 3]
+flag = True
+
+for item in lst:
+    if item == 1:
+        flag = False
+    elif item > 1:
+        for divisor in range(2, item):
+            if item % divisor == 0:
+                flag = False
+                break
+            else:
+                continue
+    else:
+        continue
+
+if flag == True:
+    print("All Numbers are prime Numbers")
+elif flag == False:
+    print("This list holds composite numbers")
+
+print("----------------------------------------------------------")
+
+#17
+print("=>(17)Write a Python program to generate all permutations of a list in Python.")
+
+
+
+
+
+print("----------------------------------------------------------")
+
+#18
+print("=>(18)Write a Python program to calculate the difference between the two lists.")
+
+lst1 = [0, 3, 4, 7, 9]
+lst2 = [3, 5, 7, 13, 15]
+
+
+print("----------------------------------------------------------")
+
+#19
+print("=>(19)Write a Python program to access the index & corresponding value of a list")
+
+lst = ["apple", "mango", "banana", "dragonfruit", "kiwi"]
+
+for item in range(len(lst)):
+    print("Index: %d value: %s" %(item, lst[item]))
+
+print("----------------------------------------------------------")
+
+#20
+print("=>(20)Write a Python program to convert a list of characters into a string.")
+
+lst_of_characters = ["m","y"," ","a","p","p","l","e"]
+print("List of characters:", lst_of_characters)
+
+delimiter = ""
+fruit = delimiter.join(lst_of_characters)
+print("String:", fruit)
+
+print("----------------------------------------------------------")
+
+#21
+print("=>(21)Write a Python program to find the index of an item in a specified list")
+
+lst = ["apple", "mango", "banana", "dragonfruit", "kiwi"]
+
+ind = lst.index("banana")
+print("Index of Banana:", ind)
+
+print("----------------------------------------------------------")
+
+#22
+print("=>(22)Write a Python program to flatten a shallow list.")
+
+print("----------Part A (Regular List of Lists)----------")
+
+original_list = [[2,4,3],[1,5,6], [9], [7,9,0]]
+flat_list = list()
+
+for lst in original_list:
+    for item in lst:
+        flat_list.append(item)
+
+print("Flat List:", flat_list)
+
+print("----------Part A (Irregular List of Lists)----------")  #this code can be used for both regular and irregular shallow lists
+
+original_list = [[2,4,3],[5,6], 9, [7]]
+flat_list = list()
+
+for lst in original_list:
+    if type(lst) is list:              # code to check whether object is a list or not
+        for item in lst:
+            flat_list.append(item)
+    else:
+        flat_list.append(lst)
+
+print(flat_list)
 print("----------------------------------------------------------")
