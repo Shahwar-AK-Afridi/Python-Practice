@@ -5,6 +5,11 @@
     3)Write a Python program to create a tuple of numbers and print one item.
     4)Write a Python program to unpack a tuple into several variables.
     5)Write a Python program to add an item to a tuple.
+    6)Write a Python program to convert a tuple to a string.
+    7)Write a Python program to get the 4th element from the last element of a tuple.
+    8)Write a Python program to create the colon of a tuple.
+    9)Write a Python program to find repeated items in a tuple.
+   10)Write a Python program to check whether an element exists within a tuple.
 """
 
 #1
@@ -62,4 +67,60 @@ lst.append("tomato")
 
 thistuple2 = tuple(lst)
 print("Modified Tuple:", thistuple2)
+print("----------------------------------------------------------")
+
+#6
+print("=>(6)Write a Python program to convert a tuple to a string.")
+
+character = ("a","p","p","l","e")
+
+delimiter = ""
+fruit = delimiter.join(character)
+print("String:", fruit)
+
+print("----------------------------------------------------------")
+
+#7
+print("=>(7)Write a Python program to get the 4th element from the last element of a tuple.")
+
+thistuple = ("apple", "banana", "mango", "kiwi", "dragon fruit")
+
+#Get item (4th element)of the tuple by index
+item = thistuple[3]
+print(item)
+#Get item (4th element from last)by index negative
+item1 = thistuple[-4]
+print(item1)
+print("----------------------------------------------------------")
+
+#8
+print("=>(8)Write a Python program to create the colon of a tuple.")
+
+
+
+
+print("----------------------------------------------------------")
+
+#9
+print("=>(9)Write a Python program to find repeated items in a tuple.")
+
+thistuple = ("apple", "banana", "mango", "kiwi", "dragon fruit", "apple", "banana", "apple")
+lst = list()
+
+for item in thistuple:
+    if thistuple.count(item) > 1:
+        lst.append(item)
+    else:
+        continue
+
+print(lst)
+
+print(lst)
+print("----------------------------------------------------------")
+
+#10
+print("=>(10)Write a Python program to check whether an element exists within a tuple.")
+
+
+
 print("----------------------------------------------------------")
