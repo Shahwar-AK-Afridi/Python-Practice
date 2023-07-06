@@ -10,6 +10,11 @@
     8)Write a Python program to create the colon of a tuple.
     9)Write a Python program to find repeated items in a tuple.
    10)Write a Python program to check whether an element exists within a tuple.
+   11)Write a Python program to convert a list to a tuple.
+   12)Write a Python program to remove an item from a tuple.
+   13)Write a Python program to slice a tuple.
+   14)Write a Python program to find the index of an item in a tuple
+   15)Write a Python program to find the length of a tuple.
 """
 
 #1
@@ -105,22 +110,106 @@ print("----------------------------------------------------------")
 print("=>(9)Write a Python program to find repeated items in a tuple.")
 
 thistuple = ("apple", "banana", "mango", "kiwi", "dragon fruit", "apple", "banana", "apple")
-lst = list()
+collection = dict()
 
 for item in thistuple:
     if thistuple.count(item) > 1:
-        lst.append(item)
+        print("%s is repeated" %item)
+        if item in collection:
+            collection[item] = collection[item] + 1
+        else:
+            collection[item] = 1
     else:
         continue
 
-print(lst)
+print("Repeated Words:", collection)
 
-print(lst)
 print("----------------------------------------------------------")
 
 #10
 print("=>(10)Write a Python program to check whether an element exists within a tuple.")
 
+thistuple = ("apple", "banana", "mango", "kiwi", "dragon fruit", "apple", "banana", "apple")
 
+word1 = "kiwi"
+word2 = "tomoto"
 
+def checker(word):
+    if word in thistuple:
+        return True
+    else:
+        return False
+
+result = checker(word2)
+print(result)
+
+print("----------------------------------------------------------")
+
+#11
+print("=>(11)Write a Python program to convert a list to a tuple.")
+
+lst = ["apple", "banana", "mango", "kiwi", "dragon fruit", "apple", "banana", "apple"]
+print("list:", lst)
+
+thistuple = tuple(lst)
+
+print("Tuple:", thistuple)
+print("----------------------------------------------------------")
+
+#12
+print("=>(12)Write a Python program to remove an item from a tuple.")
+
+thistuple = ("apple", "banana", "mango", "kiwi", "dragon fruit", "apple", "banana", "apple")
+
+print("Tuple Before Removing:", thistuple)
+lst = list(thistuple)
+lst.remove("kiwi")
+thistuple = tuple(lst)
+print("Tuple After Removing:", thistuple)
+print("----------------------------------------------------------")
+
+#13
+print("=>(13)Write a Python program to slice a tuple")
+
+thistuple = ("apple", "banana", "mango", "kiwi", "dragon fruit", "apple", "banana", "apple")
+
+slice1 = thistuple[:3]
+print("Elements from 0th Index to 2nd Index:", slice1)
+
+slice2 = thistuple[-4:]
+print("Elements from -1 index to -4 index:", slice2)
+
+slice3 = thistuple[::-1]                           #Tuple in Reverse Order
+print("Tuple in Reverse Order:", slice3)
+
+#tuple[start:stop:step]
+slice4 = thistuple[2:5:2]                            #returns a tuple with a jump every 1 items
+print(slice4)
+
+slice5 = thistuple[5:2:-2]                         #when step is negative the jump is made back
+print(slice5)
+print("----------------------------------------------------------")
+
+#14
+print("=>(14)Write a Python program to find the index of an item in a tuple")
+
+thistuple = ("apple", "banana", "mango", "apple", "dragon fruit", "apple", "banana", "apple")
+
+word = "apple"
+#finds the first occurance
+print(thistuple.index(word))
+
+#define the index from which you want to search
+print(thistuple.index(word, 1))
+
+#define the segment of the tuple to be searched
+print(thistuple.index(word, 4, 7))
+print("----------------------------------------------------------")
+
+#15
+print("=>(15)Write a Python program to find the length of a tuple.")
+
+thistuple = ("apple", "banana", "mango", "apple", "dragon fruit", "apple", "banana", "apple")
+
+print("Length:", len(thistuple))
 print("----------------------------------------------------------")
