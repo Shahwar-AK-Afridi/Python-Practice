@@ -10,6 +10,11 @@
     8)Write a Python script to merge two Python dictionaries
     9)Write a Python program to iterate over dictionaries using for loops.
    10)Write a Python program to sum all the items in a dictionary.
+   11)Write a Python program to multiply all the items in a dictionary.
+   12)Write a Python program to remove a key from a dictionary.
+   13)Write a Python program to map two lists into a dictionary.
+   14)Write a Python program to sort a given dictionary by key.
+   15)Write a Python program to get the maximum and minimum values of a dictionary.
 
 
 """
@@ -175,5 +180,80 @@ val = sample.values()
 
 add_values = sum(val)
 print("Sum Of Values:", add_values)
+
+print("----------------------------------------------------------")
+
+#11
+print("=>(11)Write a Python program to multiply all the items in a dictionary.")
+
+sample = {"tomato":22, "apple":67, "mango":22, "potato":46, "onion":44, "banana":23}
+product = 1
+
+for key in sample:
+    product = product * sample[key]
+
+print("Product:%d" %product)
+print("----------------------------------------------------------")
+
+#12
+print("=>(12)Write a Python program to remove a key from a dictionary.")
+
+sample = {"tomato":22, "apple":67, "mango":22, "potato":46, "onion":44, "banana":23}
+print("Dictionary Before Removing Items", sample)
+item = sample.pop("banana")
+print("Item Removed:", item)
+print("Dictionary After Removing Item", sample)
+print("----------------------------------------------------------")
+
+#13
+print("=>(13)Write a Python program to map two lists into a dictionary")
+
+keys = ['red', 'green', 'blue']
+values = ['#FF0000','#008000', '#0000FF']
+
+i = 0
+dic = dict()
+for key in keys:
+    dic[key] = values[i]
+    i = i + 1
+
+print("Final Dictionary:", dic)
+print("----------------------------------------------------------")
+
+#14
+print("=>(14)Write a Python program to sort a given dictionary by key.")
+
+sample = {"tomato":22, "apple":67, "mango":22, "potato":46, "onion":44, "banana":23}
+
+dic_sort = sorted(sample)
+
+for key in dic_sort:
+    print("%s:%d" %(key, sample[key]))
+print("----------------------------------------------------------")
+
+#15
+print("=>(15)Write a Python program to get the maximum and minimum values of a dictionary.")
+
+sample = {"tomato":-22, "apple":670, "mango":22, "potato":-46, "onion":44, "banana":23}
+
+lst = list(sample.values())
+
+maximum = lst[0]
+for num in lst:
+    if num > maximum:
+        maximum = num
+    else:
+        continue
+
+print("Maximum Value:%d" %maximum)
+
+minimum = lst[0]
+for num in lst:
+    if num < minimum:
+        minimum = num
+    else:
+        continue
+
+print("Minimum Value:%d" %minimum)
 
 print("----------------------------------------------------------")
