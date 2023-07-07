@@ -15,7 +15,13 @@
    13)Write a Python program to slice a tuple.
    14)Write a Python program to find the index of an item in a tuple
    15)Write a Python program to find the length of a tuple.
+   16)Write a Python program to convert a tuple to a dictionary.
+   17)Write a Python program to unzip a list of tuples into individual lists.(CHECK)
+   18)Write a Python program to reverse a tuple.
+   19)Write a Python program to convert a list of tuples into a dictionary.
+   20)Write a Python program to print a tuple with string formatting.
 """
+import random
 
 #1
 print("=>(1)Write a Python program to create a tuple.")
@@ -212,4 +218,77 @@ print("=>(15)Write a Python program to find the length of a tuple.")
 thistuple = ("apple", "banana", "mango", "apple", "dragon fruit", "apple", "banana", "apple")
 
 print("Length:", len(thistuple))
+print("----------------------------------------------------------")
+
+#16
+print("=>(16)Write a Python program to convert a tuple to a dictionary.")
+
+print("----------Type 1----------")
+thistuple = ("apple", "banana", "mango", "apple", "dragon fruit", "apple", "banana", "apple","mango", "dragon fruit")
+dic_seq = dict()
+
+for item in thistuple:
+    if item in dic_seq:
+        dic_seq[item] = dic_seq[item] + 1
+    else:
+        dic_seq[item] = 1
+
+print("Dictionary:", dic_seq)
+
+print("----------Type 2----------")
+
+tuplex = (("apple",3),("mango",5),("pinapple",4))
+dic_seq = dict(tuplex)
+print(dic_seq)
+print("----------------------------------------------------------")
+
+#17
+print("=>(17)Write a Python program to unzip a list of tuples into individual lists.")
+
+print("----------Zipping Values----------")
+# initializing lists
+name = ("John", "Smith", "Charles", "Simon")
+marks = (30,65,22,80)
+subject = ("maths", "computer", "physics", "chemistry")
+
+# using zip() to map values
+mapped = list(zip(name, subject, marks))
+print("Zipped result:", mapped)
+
+print("----------UnZipping Values----------")
+
+# unzipping values
+name, subject, marks = zip(*mapped)
+
+print("Names:", name)
+print("Marks:", marks)
+print("Subject:", subject)
+print("----------------------------------------------------------")
+
+#18
+print("=>(18)Write a Python program to reverse a tuple.")
+
+thistuple = ("apple", "banana", "mango", "apple", "dragon fruit", "apple", "banana", "apple","mango", "dragon fruit")
+
+reverse = thistuple[::-1]
+print("Reversed Tuple:", reverse)
+
+print("----------------------------------------------------------")
+
+#19
+print("=>(19)Write a Python program to convert a list of tuples into a dictionary.")
+
+lst = [('John', 30), ('Smith', 65), ('Charles', 22), ('Simon', 80)]
+
+dic = dict(lst)
+print(dic)
+print("----------------------------------------------------------")
+
+#20
+print("=>(20)Write a Python program to print a tuple with string formatting.")
+
+Sample = (100, 200, 300)
+#Output : This is a tuple (100, 200, 300)
+
+print("This is a tuple {}".format(Sample))
 print("----------------------------------------------------------")
