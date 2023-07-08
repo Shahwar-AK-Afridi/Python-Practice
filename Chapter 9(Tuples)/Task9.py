@@ -7,7 +7,7 @@
     5)Write a Python program to add an item to a tuple.
     6)Write a Python program to convert a tuple to a string.
     7)Write a Python program to get the 4th element from the last element of a tuple.
-    8)Write a Python program to create the colon of a tuple.
+    8)Write a Python program to create the colon of a tuple.(CHECK)
     9)Write a Python program to find repeated items in a tuple.
    10)Write a Python program to check whether an element exists within a tuple.
    11)Write a Python program to convert a list to a tuple.
@@ -20,6 +20,11 @@
    18)Write a Python program to reverse a tuple.
    19)Write a Python program to convert a list of tuples into a dictionary.
    20)Write a Python program to print a tuple with string formatting.
+   21)Write a Python program to replace the last value of tuples in a list.
+   22)Write a Python program to remove an empty tuple(s) from a list of tuples.(CHECK)
+   23)Write a Python program to sort a tuple by its float element.
+   24)Write a Python program to count the elements in a list until an element is a tuple.
+   25)Write a Python program to convert a given string list to a tuple.
 """
 import random
 
@@ -291,4 +296,96 @@ Sample = (100, 200, 300)
 #Output : This is a tuple (100, 200, 300)
 
 print("This is a tuple {}".format(Sample))
+print("----------------------------------------------------------")
+
+#21
+print("=>(21)Write a Python program to replace the last value of tuples in a list.")
+
+sample = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+#Expected Output: [(10, 20, 100), (40, 50, 100), (70, 80, 100)]
+
+new = list()
+for v1,v2,v3 in sample:
+    v3 = 100
+    new.append((v1,v2,v3))
+
+print("List Of Tuples Modified:", new)
+print("----------------------------------------------------------")
+
+#22
+print("=>(22)Write a Python program to remove an empty tuple(s) from a list of tuples.")
+
+sample = [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
+#Expected output: [('',), ('a', 'b'), ('a', 'b', 'c'), 'd']
+
+print("----------Approach 1----------")
+new = list()
+for item in sample:
+    if len(item) == 0:
+        del item
+    else:
+        new.append(item)
+
+print(new)
+
+print("----------Approach 2----------")
+
+new2 = list()
+for element in sample:
+    if bool(element) == True:
+        new2.append(element)
+    else:
+        continue
+
+print(new2)
+print("----------------------------------------------------------")
+
+#23
+print("=>(23)Write a Python program to sort a tuple by its float element.")
+
+sample = [('item1', '12.20'), ('item2', '15.10'), ('item3', '24.5')]
+#Expected Output: [('item3', '24.5'), ('item2', '15.10'), ('item1', '12.20')]
+new3 = list()
+
+for key, val in sample:
+    new3.append((val,key))
+
+new3 = sorted(new3, reverse = True)
+sample.clear()
+
+for val, key in new3:
+    sample.append((key, val))
+
+print("Finalized List of Tuples:", sample)
+print("----------------------------------------------------------")
+
+#24
+print("=>(24)Write a Python program to count the elements in a list until an element is a tuple.")
+
+num = [10,20,30,(10,20),40]
+count = 0
+for item in num:
+    if isinstance(item, tuple):             #type(item) is tuple =>> same
+        continue
+    else:
+        count = count + 1
+
+print("Total Number of Integers:", count)
+print("----------------------------------------------------------")
+
+#25
+print("=>(25)Write a Python program to convert a given string list to a tuple.")
+
+string = "python 3.0"
+#<class 'str'>
+#expected output: ('p', 'y', 't', 'h', 'o', 'n', '3', '.', '0')
+
+tup = tuple()
+
+for char in string:
+    if char.isspace() == True:
+        continue
+    else:
+        tup = tup + (char,)
+print("Final Tuple:", tup)
 print("----------------------------------------------------------")
