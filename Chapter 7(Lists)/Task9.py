@@ -22,6 +22,9 @@
   20)Write a Python program to convert a list of characters into a string.
   21)Write a Python program to find the index of an item in a specified list
   22)Write a Python program to flatten a shallow list.
+  23)Write a Python program to append a list to the second list.
+  24)Write a Python program to select an item randomly from a list
+  25)Write a Python program to check whether two lists are circularly identical.
 """
 import random
 
@@ -440,12 +443,48 @@ print("----------Part A (Irregular List of Lists)----------")  #this code can be
 original_list = [[2,4,3],[5,6], 9, [7]]
 flat_list = list()
 
-for lst in original_list:
-    if type(lst) is list:              # code to check whether object is a list or not
+for lst in original_list:                  #type(lst) is list == isinstance(lst, list)
+    if isinstance(lst, list):              # code to check whether object is a list or not
         for item in lst:
             flat_list.append(item)
     else:
         flat_list.append(lst)
 
 print(flat_list)
+print("----------------------------------------------------------")
+
+#23
+print("=>(23)Write a Python program to append a list to the second list.")
+
+print("-------------Approach 1 using extend() method--------------")
+
+fruit = ["apple", "mango", "dragonfruit"]
+vegetable = ["tomoto", "onion", "potato"]
+
+fruit.extend(vegetable)
+print(fruit)
+
+print("-------------Approach 2 using (+) operator----------------")
+
+fruit = ["apple", "mango", "dragonfruit"]
+vegetable = ["tomoto", "onion", "potato"]
+
+final = fruit + vegetable
+print(final)
+print("----------------------------------------------------------")
+
+#24
+print("=>(24)Write a Python program to select an item randomly from a list")
+
+num = [4,53,5,5,4,4,43,23,367,45,56,3,3,363,633,36]
+
+random_num = random.choice(num)
+print("Random Number:", random_num)
+print("----------------------------------------------------------")
+
+
+#25
+print("=>(25)Write a Python program to check whether two lists are circularly identical.")
+
+
 print("----------------------------------------------------------")
