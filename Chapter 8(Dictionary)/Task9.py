@@ -15,8 +15,11 @@
    13)Write a Python program to map two lists into a dictionary.
    14)Write a Python program to sort a given dictionary by key.
    15)Write a Python program to get the maximum and minimum values of a dictionary.
-
-
+   16)Write a Python program to get a dictionary from an object's fields.
+   17)Write a Python program to remove duplicates from the dictionary.
+   18)Write a Python program to check if a dictionary is empty or not.
+   19)Write a Python program to combine two dictionary by adding values for common keys.
+   20)Write a Python program to print all distinct values in a dictionary.
 """
 
 import math
@@ -255,5 +258,41 @@ for num in lst:
         continue
 
 print("Minimum Value:%d" %minimum)
+
+print("----------------------------------------------------------")
+
+#16
+print("=>(16)Write a Python program to get a dictionary from an object's fields.")
+
+
+print("----------------------------------------------------------")
+
+#17
+print("=>(17)Write a Python program to remove duplicates from the dictionary.")
+
+
+
+print("----------------------------------------------------------")
+
+#18
+print("=>(18)Write a Python program to check if a dictionary is empty or not.")
+
+
+print("----------------------------------------------------------")
+
+#19
+print("=>(19)Write a Python program to combine two dictionary by adding values for common keys.")
+
+#d1 = {'a': 100, 'b': 200, 'c':300}
+#d2 = {'a': 300, 'b': 200, 'd':400}
+#Sample output: Counter({'a': 400, 'b': 400, 'd': 400, 'c': 300})
+
+print("----------------------------------------------------------")
+
+#20
+print("=>(20)Write a Python program to print all distinct values in a dictionary.")
+
+#Sample Data : [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
+#Expected Output : Unique Values: {'S005', 'S002', 'S007', 'S001', 'S009'}
 
 print("----------------------------------------------------------")
