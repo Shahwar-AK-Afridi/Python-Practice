@@ -383,7 +383,7 @@ string = "python 3.0"
 tup = tuple()
 
 for char in string:
-    if char.isspace() == True:
+    if char.isspace() == True:      #char == " "
         continue
     else:
         tup = tup + (char,)
