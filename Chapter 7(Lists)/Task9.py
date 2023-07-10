@@ -24,7 +24,12 @@
   22)Write a Python program to flatten a shallow list.
   23)Write a Python program to append a list to the second list.
   24)Write a Python program to select an item randomly from a list
-  25)Write a Python program to check whether two lists are circularly identical.
+  25)Write a Python program to check whether two lists are circularly identical. (CHECK)
+  26)Write a Python program to find the second smallest number in a list.
+  27)Write a Python program to find the second largest number in a list.
+  28)Write a Python program to get unique values from a list
+  29)Write a Python program to get the frequency of elements in a list.
+  30)Write a Python program to count the number of elements in a list within a specified range.
 """
 import random
 
@@ -482,9 +487,40 @@ random_num = random.choice(num)
 print("Random Number:", random_num)
 print("----------------------------------------------------------")
 
-
 #25
 print("=>(25)Write a Python program to check whether two lists are circularly identical.")
+
+
+print("----------------------------------------------------------")
+
+#26
+print("=>(26)Write a Python program to find the second smallest number in a list.")
+
+
+print("----------------------------------------------------------")
+
+#27
+print("=>(27)Write a Python program to find the second largest number in a list.")
+
+
+print("----------------------------------------------------------")
+
+#28
+print("=>(28)Write a Python program to get unique values from a list")
+
+
+
+print("----------------------------------------------------------")
+
+#29
+print("=>(29)Write a Python program to get the frequency of elements in a list.")
+
+
+print("----------------------------------------------------------")
+
+#30
+print("=>(30)Write a Python program to count the number of elements in a list within a specified range.")
+
 
 
 print("----------------------------------------------------------")
