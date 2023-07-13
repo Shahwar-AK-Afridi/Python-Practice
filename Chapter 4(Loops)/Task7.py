@@ -1,25 +1,32 @@
-"""Practicing For Loop"""
+"""Calculating Sum through For-loop"""
 
-#First
-for i in [5,4,3,2,1]: #No Logical Condition to STOP
-    print("i =",i)    #No of iteration = No of items in the list
-print("Done")
+print("Calculating Sum through For-loop")
+total = 0                           #Iteration variable = "Thing"
+print("Sum Before:%d" %total)
+for add in [9,41,12,3,74,15]:
+    #Running Total = "total"
+    total = total + add             #Inside Loop = we add actual number to the running total during each Iteration
+    # total aka accumulator
+print("Final Total :%f" %total)   #This total is called as "Overall total of the values"
+print("-----------------------------------------------")
 
-print("------------------------------------------------")
+"""Calculating Sum of numbers through self-developed function"""
 
-#Second
-for i in ["Apple", "Banana", "Mango"]:
-    print("i =",i)  #Execute Only three times
-print("Done")
+print("Calculating Sum of numbers through self-developed function")
+def Summing(numbers):
+    total = 0
+    for add in numbers:
+        total = total + add
+    print("Total Sum: %f" %total)
+    return
 
-print("------------------------------------------------")
+numbers = [9,41,12,3,74,15]
+Summing(numbers)
+print("-----------------------------------------------")
 
-#Third
-string = "Hello World"
-print("The string is %s" %string)
-count = 0
-for i in string:
-    count = count + 1
-print("The Length of string is %d" %count)
+"""Calculating Sum through built-in function Sum()"""
 
-print("------------------------------------------------")
+print("Calculating Sum through built-in function Sum()")
+num = [9,41,12,3,74,15]
+total = sum(num)
+print("Sum: %f" %total)
