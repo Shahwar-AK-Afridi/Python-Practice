@@ -1,32 +1,51 @@
-"""Calculating Sum through For-loop"""
+import statistics
 
-print("Calculating Sum through For-loop")
-total = 0                           #Iteration variable = "Thing"
-print("Sum Before:%d" %total)
-for add in [9,41,12,3,74,15]:
-    #Running Total = "total"
-    total = total + add             #Inside Loop = we add actual number to the running total during each Iteration
-    # total aka accumulator
-print("Final Total :%f" %total)   #This total is called as "Overall total of the values"
+"""Calculating Average through For loop"""
+"""
+    1)Calculating Average through For loop
+    2)Calculating Average through self-developed function
+    3)Calculating Average through built-in function mean()
+"""
+
+#1
+print("=>(1)Calculating Average through loop")
+
+total = 0
+denominator = 0
+for num in [9,41,12,3,74,15]:
+    total = total + num
+    denominator = denominator + 1
+print("Total Sum: %d" %total)
+print("Total Numbers: %d" %denominator)
+
+Average = float(total/denominator)
+print("Average: %f" %Average)
+
 print("-----------------------------------------------")
 
-"""Calculating Sum of numbers through self-developed function"""
-
-print("Calculating Sum of numbers through self-developed function")
-def Summing(numbers):
+#2
+print("=>(2)Calculating Average through self-developed function")
+def average(number):
     total = 0
-    for add in numbers:
-        total = total + add
-    print("Total Sum: %f" %total)
+    denominator = 0
+    for num in number:
+        total = total + num
+        denominator = denominator + 1
+    print("Total Sum: %d" %total)
+    print("Total Numbers: %d" %denominator)
+    Average = float(total/denominator)
+    print("Average: %f" %Average)
     return
 
-numbers = [9,41,12,3,74,15]
-Summing(numbers)
+number = [9,41,12,3,74,15]
+average(number)
+
 print("-----------------------------------------------")
 
-"""Calculating Sum through built-in function Sum()"""
+#3
+print("=>(3)Calculating Average through built-in function mean()")
+number = [9,41,12,3,74,15]
+Average = statistics.mean(number)
+print("Average: %f" %Average)
 
-print("Calculating Sum through built-in function Sum()")
-num = [9,41,12,3,74,15]
-total = sum(num)
-print("Sum: %f" %total)
+print("-----------------------------------------------")
