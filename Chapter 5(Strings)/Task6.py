@@ -5,6 +5,9 @@
     3)Write a Python program to get a string made of the first 2 and last 2 characters of a given string. If the string length is less than 2, return the empty string instead.
     4)Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
     5)Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string
+    6)Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged
+    7)Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string. If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
+
 """
 #1
 print("=>(1)Write a Python program to calculate the length of a string")
@@ -86,3 +89,61 @@ combine = new_sample2 +" "+ new_sample1
 print(combine)
 
 print("----------------------------------------------------------")
+
+#6
+print("=>(6)Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged")
+"""
+Sample String : 'abc'
+Expected Result : 'abcing'
+Sample String : 'string'
+Expected Result : 'stringly
+"""
+
+words = ["apple","string","playing","mango","pi","pop","abc","pk","eat"]
+
+def string_modifier(phrases: list)-> list:
+    lst = []
+    for item in phrases:
+        if len(item) >= 3 and item[-3:] == "ing":
+            item = item + "ly"
+            lst.append(item)
+        elif len(item) >= 3:
+            item = item + "ing"
+            lst.append(item)
+        else:
+            lst.append(item)
+    return lst
+
+print(string_modifier(words))
+
+print("----------------------------------------------------------")
+
+#7
+print("Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string. If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.")
+
+"""
+Sample String : 'The lyrics is not that poor!'
+Expected Result : 'The lyrics is good!'
+"""
+phrase = "The lyrics is not that poor! you are not a good listener"
+
+def not_poor_remover(string: str)-> str:
+   
+    pos_not = string.find("not")
+    pos_poor = string.find("poor")
+
+    if pos_poor > pos_not:
+        new = string.replace(string[pos_not:pos_poor + 4], "good")
+    return new
+
+print(not_poor_remover(phrase))
+
+
+
+
+
+
+
+
+print("----------------------------------------------------------")
+
