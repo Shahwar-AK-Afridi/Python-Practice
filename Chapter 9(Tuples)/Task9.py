@@ -25,6 +25,7 @@
    23)Write a Python program to sort a tuple by its float element.
    24)Write a Python program to count the elements in a list until an element is a tuple.
    25)Write a Python program to convert a given string list to a tuple.
+   26)Write a Python program to calculate the product, multiplying all the numbers in a given tuple
 """
 import random
 
@@ -389,3 +390,23 @@ for char in string:
         tup = tup + (char,)
 print("Final Tuple:", tup)
 print("----------------------------------------------------------")
+
+#26
+print("=>(26)Write a Python program to calculate the product, multiplying all the numbers in a given tuple")
+
+Original = (4, 3, 2, 2, -1, 18)
+#Product - multiplying all the numbers of the said tuple: -864
+Original2 = (2, 4, 8, 8, 3, 2, 9)
+#Product - multiplying all the numbers of the said tuple: 27648
+
+def product(tup: tuple)-> float:
+    product = 1
+    for item in tup:
+        product = product * item
+    return product    
+
+print(product(Original2))
+print(product(Original))
+
+print("----------------------------------------------------------")
+
