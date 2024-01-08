@@ -277,15 +277,35 @@ print("----------------------------------------------------------")
 #18
 print("=>(18)Write a Python program to check if a dictionary is empty or not.")
 
+abc = {}
+
+def empty_checker(my_dict: dict)-> bool:
+    if len(my_dict) > 0:
+        flag = False
+    else:
+        flag = True
+    return flag
+
+print(empty_checker(abc))        
 
 print("----------------------------------------------------------")
 
 #19
 print("=>(19)Write a Python program to combine two dictionary by adding values for common keys.")
 
-#d1 = {'a': 100, 'b': 200, 'c':300}
-#d2 = {'a': 300, 'b': 200, 'd':400}
+d1 = {'a': 100, 'b': 200, 'c':300, "e":600, "j":22}
+d2 = {'a': 300, 'b': 200, 'd':400, "e":400}
 #Sample output: Counter({'a': 400, 'b': 400, 'd': 400, 'c': 300})
+
+def combine_keys(d1: dict , d2: dict)-> dict:
+    for key in d1.keys():
+        if key in d2.keys():
+            d2[key] = d1[key] + d2[key]
+        else:
+            d2[key] = d1[key]
+    return d2
+
+print(combine_keys(d1,d2))
 
 print("----------------------------------------------------------")
 

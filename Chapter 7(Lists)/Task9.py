@@ -497,6 +497,7 @@ print("----------------------------------------------------------")
 print("=>(26)Write a Python program to find the second smallest number in a list.")
 
 
+
 print("----------------------------------------------------------")
 
 #27
@@ -508,19 +509,50 @@ print("----------------------------------------------------------")
 #28
 print("=>(28)Write a Python program to get unique values from a list")
 
+my_list = [10, 20, 30, 40, 20, 50, 60, 40, 20, 50, 30]
 
+def unique_item(lst:list)-> list:
+    lst2 = []
+    for item in lst:
+        if item not in lst2:
+            lst2.append(item)
+    return lst2
+
+print(unique_item(my_list))
 
 print("----------------------------------------------------------")
 
 #29
 print("=>(29)Write a Python program to get the frequency of elements in a list.")
 
+my_list = [10, 10, 10, 10, 20, 20, 20, 20, 40, 40, 50, 50, 30]
+
+frequency = {}
+
+for item in my_list:
+    if item not in frequency:
+        frequency[item] = 0 
+    frequency[item] += 1
+
+print(frequency)
 
 print("----------------------------------------------------------")
 
 #30
 print("=>(30)Write a Python program to count the number of elements in a list within a specified range.")
 
+list1 = [10, 20, 30, 40, 40, 40, 70, 80, 99]
 
+r1 = 20
+r2 = 80
+
+def count_in_range(lst: list, min: int, max: int)-> int:
+    count_so_far = 0
+    for item in list1:
+        if item >= 20 and item <= 80:
+            count_so_far += 1
+    return count_so_far
+
+print(count_in_range(list1, r1, r2))
 
 print("----------------------------------------------------------")
