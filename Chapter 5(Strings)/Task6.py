@@ -8,6 +8,7 @@
     6)Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged
     7)Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string. If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
     8)Write a Python function that takes a list of words and return the longest word and the length of the longest one.
+    9)"Write a Python program to remove the nth index character from a nonempty string."
 """
 #1
 print("=>(1)Write a Python program to calculate the length of a string")
@@ -147,18 +148,63 @@ print("Write a Python function that takes a list of words and return the longest
 #Longest word: Exercises
 #Length of the longest word: 9"
 
-def longest_string(lst:list)->str:
+#option 1
+def longest_string(lst:list)->tuple:
     flag = lst[0]
     for item in lst:
         if len(item) > len(flag):
             flag = item
     return (flag, len(flag))   
 
+#option 2 It also checks if the length of 2 strings are same then compare strings
+def longest_string2(lst:list)->tuple:
+    words = []
+    for item in lst:
+        words.append((len(item),item))
+    
+    words.sort()
+    return words[-1]
 
 
-
-lst = ["PHP", "Exercises", "Backend","Front-end "]
-
+lst = ["PHP", "Exercise", "Back-end","Frontend"]
 result = longest_string(lst)
 print("{} is longest word with length {}".format(result[0],result[1]))
+
+result2 = longest_string2(lst)
+print("{} is longest word with length {}".format(result2[1],result2[0]))
+
 print("----------------------------------------------------------")
+
+#9
+print("Write a Python program to remove the nth index character from a nonempty string.")
+
+#option 1
+def remove(word: str, index: int)->str:
+    characters = list(word)
+    lst = []
+    for pos in range(len(word)):
+        if pos != index:
+            lst.append(characters[pos]) 
+    product = "".join(lst)
+    return product
+
+#option 2
+def remove2(word:str, index: int)->str:
+    first = word[:index]
+    last = word[index + 1:]
+    final = first + last
+    return final
+
+word = "Python Is Everywhere"
+index = 10
+
+result = remove(word, index)
+print("String Before:", word)
+print("String After:", result)
+
+result2 = remove2(word, index)
+print("String Before:", word)
+print("String After:", result)
+
+print("----------------------------------------------------------")
+
