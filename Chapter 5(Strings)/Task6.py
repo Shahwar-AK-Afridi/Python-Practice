@@ -216,8 +216,8 @@ def str_ex(word: str)->str:
     word = last + mid + first
     return word
 
-
 result = str_ex("Hello World")
 print(result)
 
 print("----------------------------------------------------------")
+
