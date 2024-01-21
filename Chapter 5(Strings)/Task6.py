@@ -7,7 +7,7 @@
     5)Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string
     6)Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged
     7)Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string. If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
-
+    8)Write a Python function that takes a list of words and return the longest word and the length of the longest one.
 """
 #1
 print("=>(1)Write a Python program to calculate the length of a string")
@@ -138,12 +138,27 @@ def not_poor_remover(string: str)-> str:
 
 print(not_poor_remover(phrase))
 
-
-
-
-
-
-
-
 print("----------------------------------------------------------")
 
+#8
+print("Write a Python function that takes a list of words and return the longest word and the length of the longest one.")
+
+#Sample Output:
+#Longest word: Exercises
+#Length of the longest word: 9"
+
+def longest_string(lst:list)->str:
+    flag = lst[0]
+    for item in lst:
+        if len(item) > len(flag):
+            flag = item
+    return (flag, len(flag))   
+
+
+
+
+lst = ["PHP", "Exercises", "Backend","Front-end "]
+
+result = longest_string(lst)
+print("{} is longest word with length {}".format(result[0],result[1]))
+print("----------------------------------------------------------")
