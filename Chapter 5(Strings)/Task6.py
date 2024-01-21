@@ -8,7 +8,8 @@
     6)Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged
     7)Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string. If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
     8)Write a Python function that takes a list of words and return the longest word and the length of the longest one.
-    9)"Write a Python program to remove the nth index character from a nonempty string."
+    9)Write a Python program to remove the nth index character from a nonempty string.
+   10)Write a Python program to change a given string to a newly string where the first and last chars have been exchanged
 """
 #1
 print("=>(1)Write a Python program to calculate the length of a string")
@@ -195,16 +196,28 @@ def remove2(word:str, index: int)->str:
     final = first + last
     return final
 
-word = "Python Is Everywhere"
-index = 10
-
-result = remove(word, index)
-print("String Before:", word)
+result = remove("Python", 4)
+print("String Before: Python")
 print("String After:", result)
 
-result2 = remove2(word, index)
-print("String Before:", word)
+result2 = remove2("Python", 0)
+print("String Before: Python")
 print("String After:", result)
 
 print("----------------------------------------------------------")
 
+#10
+print("Write a Python program to change a given string to a newly string where the first and last chars have been exchanged")
+
+def str_ex(word: str)->str:
+    first = word[0]
+    mid = word[1:-1]
+    last = word[-1]
+    word = last + mid + first
+    return word
+
+
+result = str_ex("Hello World")
+print(result)
+
+print("----------------------------------------------------------")
