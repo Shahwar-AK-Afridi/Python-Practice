@@ -2,7 +2,7 @@
 """
    1)Write a Python program to find those numbers which are divisible by 7 and multiples of 5, between 1500 and 2700 (both included)
    2)Write a Python program to convert temperatures to and from Celsius and Fahrenheit.
-   3)
+   3)Write a Python program to guess a number between 1 and 9
    4)
    5)
    6)
@@ -11,6 +11,9 @@
    9)
   10)
 """
+
+import random
+
 #1
 print("Write a Python program to find those numbers which are divisible by 7 and multiples of 5, between 1500 and 2700 (both included)")
 
@@ -43,4 +46,23 @@ def cel_to_fh(temp: float, celsius = True)->int:
 
 print(cel_to_fh(60, False))
 print(cel_to_fh(45))
+print("----------------------------------------------------------")
+
+#3
+print("Write a Python program to guess a number between 1 and 9")
+""" Note : User is prompted to enter a guess. If the user guesses wrong then the prompt appears again until the guess is correct, 
+on successful guess, user will get a "Well guessed!" message, and the program will exit"""
+
+def guess_game(num: int)->int:
+    dice = random.randint(1,9)
+    print("Dice ans", dice)
+    if dice == num:
+        return "You Won"
+    else:
+        return "You Lost"
+
+num = 8
+result = guess_game(num)
+print(result)
+
 print("----------------------------------------------------------")
