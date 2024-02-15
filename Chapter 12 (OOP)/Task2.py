@@ -4,6 +4,7 @@
     3)Write a Python program to create a calculator class. Include methods for basic arithmetic operations
 
 """
+import datetime
 
 #1
 print("(1)Write a Python program to create a class representing a Circle. Include methods to calculate its area and perimeter.")
@@ -44,8 +45,12 @@ class Person:
         self.date_of_birth = date_of_birth
 
     def age(self):
-        pass
+        year1 = datetime.date.today()
+        born = year1.year - self.date_of_birth
+        return born
 
+p1 = Person("Shawar","asdsad", 1999)
+print(p1.age())
 
 
 
@@ -87,9 +92,6 @@ print(numbers1.add())
 print(numbers1.difference())
 print(numbers1.product())
 print(numbers1.divide())
-
-
-
 
 print("----------------------------------------------------------")
 
