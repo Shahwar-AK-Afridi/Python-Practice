@@ -102,9 +102,10 @@ print("(4)Write a Python program to create a class that represents a shape. Incl
 
 class shape:
 
+    # Placeholder method for calculating area (to be implemented in derived classes)
     def area(self):
         pass
-
+    # Placeholder method for calculating perimeter (to be implemented in derived classes)
     def perimeter(self):
         pass
 
@@ -164,4 +165,5 @@ print("Rectangle Perimeter = ",rectangle1.perimeter())
 triangle1 = triangle(4,5,3)
 print("Triangle Area = ",triangle1.area())
 print("Triangle Perimeter = ",triangle1.perimeter())
+
 print("----------------------------------------------------------")
