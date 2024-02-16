@@ -9,7 +9,7 @@
    7)Write a Python program that prints each item and its corresponding type from the following list
    8)Write a Python program that prints all the numbers from 0 to 6 except 3 and 6
    9)Write a Python program to get the Fibonacci series between 0 and 50
-  10)
+  10)Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz"
 """
 
 import random
@@ -151,7 +151,13 @@ print(Fibonacci(100))
 print("----------------------------------------------------------")
 
 #10
-print("(10)")
+print("(10)Write a Python program that iterates the integers from 1 to 50. For multiples of three print ""Fizz"" instead of the number and for multiples of five print ""Buzz"". For numbers that are multiples of three and five, print ""FizzBuzz""")
 
-
+for num in range(1,51):
+    if num % 3 == 0 and num % 5 == 0:
+        print("FizzBuzz")
+    elif num % 3 == 0:
+        print("Fizz")
+    elif num % 5 == 0:
+        print("Buzz")
 print("----------------------------------------------------------")
