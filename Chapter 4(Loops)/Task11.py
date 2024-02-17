@@ -175,8 +175,12 @@ j = 0,1, n-1.
 
 i = 5
 j = 2
+arr = []
 
 for outer in range(i):
     for inner in range(j):
-        
+        arr.append(outer * inner)
+
+print(arr)
+
 print("----------------------------------------------------------")
