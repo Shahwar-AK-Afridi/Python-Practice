@@ -10,6 +10,8 @@
    8)Write a Python program that prints all the numbers from 0 to 6 except 3 and 6
    9)Write a Python program to get the Fibonacci series between 0 and 50
   10)Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz"
+  11)Write a Python program that takes two digits m (row) and n (column) as input and generates a two-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
+
 """
 
 import random
@@ -160,4 +162,16 @@ for num in range(1,51):
         print("Fizz")
     elif num % 5 == 0:
         print("Buzz")
+print("----------------------------------------------------------")
+
+#11
+print("(11)Write a Python program that takes two digits m (row) and n (column) as input and generates a two-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.")
+
+"""
+Note :
+i = 0,1.., m-1
+j = 0,1, n-1.
+"""
+
+
 print("----------------------------------------------------------")
