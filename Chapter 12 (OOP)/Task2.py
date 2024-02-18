@@ -3,7 +3,14 @@
     2)Write a Python program to create a person class. Include attributes like name, country and date of birth. Implement a method to determine the person's age
     3)Write a Python program to create a calculator class. Include methods for basic arithmetic operations
     4)Write a Python program to create a class that represents a shape. Include methods to calculate its area and perimeter. Implement subclasses for different shapes like circle, triangle, and square
-"""
+    5)Write a Python program to create a class representing a binary search tree. Include methods for inserting and searching for elements in the binary tree.
+    6)Write a Python program to create a class representing a stack data structure. Include methods for pushing and popping elements.
+    7)Write a Python program to create a class representing a linked list data structure. Include methods for displaying linked list data, inserting and deleting nodes.
+    8)Write a Python program to create a class representing a shopping cart. Include methods for adding and removing items, and calculating the total price.
+    9)Write a Python program to create a class representing a stack data structure. Include methods for pushing, popping and displaying elements.
+   10)Write a Python program to create a class representing a queue data structure. Include methods for enqueueing and dequeueing elements.
+   11)Write a Python program to create a class representing a bank. Include methods for managing customer accounts and transactions
+    """
 import datetime, math
 
 #1
@@ -165,5 +172,73 @@ print("Rectangle Perimeter = ",rectangle1.perimeter())
 triangle1 = triangle(4,5,3)
 print("Triangle Area = ",triangle1.area())
 print("Triangle Perimeter = ",triangle1.perimeter())
+
+print("----------------------------------------------------------")
+
+#5
+print("(5)Write a Python program to create a class representing a binary search tree. Include methods for inserting and searching for elements in the binary tree.")
+
+
+
+
+
+print("----------------------------------------------------------")
+
+
+#6
+print("(6)Write a Python program to create a class representing a stack data structure. Include methods for pushing and popping elements.")
+
+
+
+
+print("----------------------------------------------------------")
+
+#7
+print("(7)Write a Python program to create a class representing a linked list data structure. Include methods for displaying linked list data, inserting and deleting nodes")
+
+
+
+print("----------------------------------------------------------")
+
+#8
+print("(8)Write a Python program to create a class representing a shopping cart. Include methods for adding and removing items, and calculating the total price.")
+
+class shopping:
+
+    fruits = {"Mango": 2, "Orange":4, "Peaches": 1}
+
+    def __init__(self, **items):
+        self.items = items
+        
+    def add(self):
+
+        total_price = 0
+        for key,val in self.items.items():
+            total_price = total_price + (val * self.fruits[key])  
+        return total_price    
+
+cart1 = shopping(Mango = 5, Orange = 10, Peaches = 2)
+print(cart1.add())
+
+print("----------------------------------------------------------")
+
+#9
+print("(9)Write a Python program to create a class representing a stack data structure. Include methods for pushing, popping and displaying elements.")
+
+
+
+print("----------------------------------------------------------")
+
+#10
+print("(10)Write a Python program to create a class representing a queue data structure. Include methods for enqueueing and dequeueing elements")
+
+
+print("----------------------------------------------------------")
+
+#11
+print("(11)Write a Python program to create a class representing a bank. Include methods for managing customer accounts and transactions")
+
+
+
 
 print("----------------------------------------------------------")
