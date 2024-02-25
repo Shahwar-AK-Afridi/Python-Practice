@@ -11,10 +11,14 @@
    9)Write a Python program to get the Fibonacci series between 0 and 50
   10)Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz"
   11)Write a Python program that takes two digits m (row) and n (column) as input and generates a two-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
-
-"""
+  12)Write a Python program that accepts a sequence of lines (blank line to terminate) as input and prints the lines as output (all characters in lower case).
+  13)Write a Python program that accepts a sequence of comma separated 4 digit binary numbers as its input. The program will print the numbers that are divisible by 5 in a comma separated sequence.
+  14)Write a Python program to check the validity of passwords input by users. 
+  15)Write a Python program to find numbers between 100 and 400 (both included) where each digit of a number is an even number. The numbers obtained should be printed in a comma-separated sequence
+  """
 
 import random
+import string
 
 #1
 print("(1)Write a Python program to find those numbers which are divisible by 7 and multiples of 5, between 1500 and 2700 (both included)")
@@ -173,14 +177,88 @@ i = 0,1.., m-1
 j = 0,1, n-1.
 """
 
-i = 5
-j = 2
-arr = []
+def matrix_generator(rows, columns):
+    outer_array = []
 
-for outer in range(i):
-    for inner in range(j):
-        arr.append(outer * inner)
+    for x in range(rows):
+        inner_array = []
+        for y in range(columns):
+            inner_array.append(x*y)
+        outer_array.append(inner_array)
+    return outer_array
 
-print(arr)
+print(matrix_generator(3,5))
 
 print("----------------------------------------------------------")
+
+#12
+print("(12)Write a Python program that accepts a sequence of lines (blank line to terminate) as input and prints the lines as output (all characters in lower case).")
+
+"""words = []
+
+while True:
+    word = input("Enter The Word: ")
+    if word != "":
+        words.append(word.lower())
+    else:
+        break
+
+print(words)"""
+
+print("----------------------------------------------------------")
+
+#13
+print("(13)Write a Python program that accepts a sequence of comma separated 4 digit binary numbers as its input. The program will print the numbers that are divisible by 5 in a comma separated sequence")
+
+def character_checker(string):
+    
+    letter, number, others = (0,0,0)
+
+    for char in string:
+        if char.isalpha():
+            letter += 1
+        elif char.isdigit():
+            number += 1
+        else:
+            others += 1
+    representation = "Total Letters = {}, and Total Numbers = {}, Total Others = {}".format(letter,number,others)
+    return representation
+
+print(character_checker("Hello World 210"))
+print("----------------------------------------------------------")
+
+#14
+print("Write a Python program to check the validity of passwords input by users.")
+
+"""Validation :
+
+At least 1 letter between [a-z] and 1 letter between [A-Z].
+At least 1 number between [0-9].
+At least 1 character from [$#@].
+Minimum length 6 characters.
+Maximum length 16 characters."""
+
+password = "helloPYthon1234*&^"
+
+if len(password) >=6 and len(password) <= 16:
+    for char in password:
+        if char in list(string.ascii_lowercase):
+            pass
+
+print("----------------------------------------------------------")
+
+
+#15
+print("Write a Python program to find numbers between 100 and 400 (both included) where each digit of a number is an even number. The numbers obtained should be printed in a comma-separated sequence")
+
+def even_checker():
+    num = 0
+    even_lst = []
+    for num in range(100,401):
+        num_str = str(num)
+        if num % 2 == 0:
+            even_lst.append(num_str)
+    result = ",".join(even_lst)
+    return result
+
+print(even_checker())
