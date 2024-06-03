@@ -1,7 +1,6 @@
 import requests
 import json
 
-
 parameters = {"term": "Ann Arbor", "entity": "podcast"}
 iTunes_response = requests.get("https://itunes.apple.com/search", params = parameters)
 

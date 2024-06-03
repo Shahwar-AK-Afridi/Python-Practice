@@ -262,3 +262,5 @@ def even_checker():
     return result
 
 print(even_checker())
+
+print("----------------------------------------------------------")
