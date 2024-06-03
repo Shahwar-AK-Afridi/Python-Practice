@@ -5,6 +5,7 @@
     4)Create a class called AppleBasket whose constructor accepts two inputs: a string representing a color, and a number representing a quantity of apples. The constructor should initialize two instance variables: apple_color and apple_quantity. Write a class method called increase that increases the quantity by 1 each time it is invoked. You should also write a __str__ method for this class that returns a string of the format: "A basket of [quantity goes here] [color goes here] apples." e.g. "A basket of 4 red apples." or "A basket of 50 blue apples." (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
     5)Define a class called BankAccount that accepts the name you want associated with your bank account in a string, and an integer that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: name and amt. Add a string method so that when you print an instance of BankAccount, you see "Your account, [name goes here], has [start_amt goes here] dollars." Create an instance of this class with "Bob" as the name and 100 as the amount. Save this to the variable t1
     6)Person and Student classes using inheritance
+    7)Books, PaperBooks, Ebooks and Library (Composition)
 """
 
 #1
@@ -181,5 +182,82 @@ afridi.study()
 print(afridi)
 afridi.study()
 print(afridi)
+
+print("----------------------------------------------------------")
+
+#7
+print("(7)Books, PaperBooks, Ebooks and Library (Composition)")
+
+class Books():
+
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def __str__(self):
+        representation = "{} by {}".format(self.title, self.author)
+        return representation
+    
+class PaperBook(Books):
+
+    def __init__(self, title, author, num_pages):
+        super().__init__(title, author)
+        self.num_pages = num_pages
+
+    def __str__(self):
+        representation = "Paper Book=>" + super().__str__()
+        return representation
+    
+class Ebook(Books):
+
+    def __init__(self, title, author, size):
+        super().__init__(title, author)
+        self.size = size
+
+    def __str__(self):
+        representation = "Ebook=>" + super().__str__()
+        return representation
+
+
+class library():
+    """This Library class is composed of list of books this is called composition"""
+    def __init__(self) -> None:
+        self.books = []
+
+    def addBook(self, book):
+        self.books.append(book)
+
+    def getNumBooks(self):
+        num_of_books = len(self.books)
+        return num_of_books
+    
+    def lstofbooks(self):
+        return self.books
+    
+paper = PaperBook("Python For Everybody", "Charles", 1000)
+print(paper)
+ebook = Ebook("Automation Using Python", "Charles", 500)
+print(ebook)
+
+lib = library()
+lib.addBook(paper)
+lib.addBook(ebook)
+
+#only printing title of book/objects
+for book in lib.lstofbooks():
+    print(book.title)
+
+for book in lib.lstofbooks():
+    print(book.author)
+
+
+
+
+
+
+
+
+
+
 
 print("----------------------------------------------------------")
