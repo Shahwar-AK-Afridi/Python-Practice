@@ -247,17 +247,8 @@ lib.addBook(ebook)
 for book in lib.lstofbooks():
     print(book.title)
 
+#only printing author of books/objects
 for book in lib.lstofbooks():
     print(book.author)
-
-
-
-
-
-
-
-
-
-
 
 print("----------------------------------------------------------")
