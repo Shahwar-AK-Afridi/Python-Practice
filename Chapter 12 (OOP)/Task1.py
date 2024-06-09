@@ -4,9 +4,12 @@
     3)Define a class called Bike that accepts a string and a float as input, and assigns those inputs respectively to two instance variables, color and price. Assign to the variable testOne an instance of Bike whose color is blue and whose price is 89.99. Assign to the variable testTwo an instance of Bike whose color is purple and whose price is 25.0.
     4)Create a class called AppleBasket whose constructor accepts two inputs: a string representing a color, and a number representing a quantity of apples. The constructor should initialize two instance variables: apple_color and apple_quantity. Write a class method called increase that increases the quantity by 1 each time it is invoked. You should also write a __str__ method for this class that returns a string of the format: "A basket of [quantity goes here] [color goes here] apples." e.g. "A basket of 4 red apples." or "A basket of 50 blue apples." (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
     5)Define a class called BankAccount that accepts the name you want associated with your bank account in a string, and an integer that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: name and amt. Add a string method so that when you print an instance of BankAccount, you see "Your account, [name goes here], has [start_amt goes here] dollars." Create an instance of this class with "Bob" as the name and 100 as the amount. Save this to the variable t1
-    6)Person and Student classes using inheritance
-    7)Books, PaperBooks, Ebooks and Library (Composition)
+    6) [inheritance] Person and Student classes
+    7) [Composition] Books, PaperBooks, Ebooks and Library
+    8) [Composition] Given a Point class below with a distance object method that takes another point and returns the distance between the two points, create a Line class with an __init__ method that takes two points. Also write the length method in the Line class to return the length of the line (hint: use the distance method in the Point class).
 """
+
+import math
 
 #1
 print("(1)Add a method reflect_x to Point which returns a new Point, one which is the reflection of the point about the x-axis. For example, Point(3, 5).reflect_x() is (3, -5)")
@@ -185,7 +188,7 @@ print(afridi)
 
 print("----------------------------------------------------------")
 
-#7
+#7 (Composition)
 print("(7)Books, PaperBooks, Ebooks and Library (Composition)")
 
 class Books():
@@ -250,5 +253,42 @@ for book in lib.lstofbooks():
 #only printing author of books/objects
 for book in lib.lstofbooks():
     print(book.author)
+
+print("----------------------------------------------------------")
+
+#8 (Composition)
+print("(8)Given a Point class below with a distance object method that takes another point and returns the distance between the two points, create a Line class with an __init__ method that takes two points. Also write the length method in the Line class to return the length of the line (hint: use the distance method in the Point class).")
+
+class Point:
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def __str__(self):
+        return f"x = {self.x}, y = {self.y}"
+
+    def distance(self, other):
+        mx = (self.x - other.x) ** 2
+        my = (self.y - other.y) ** 2
+        return math.sqrt(mx + my)
+
+class Line:
+    
+    def __init__(self, point1, point2):
+        self.p1 = point1
+        self.p2 = point2
+    
+    #option 1    
+    def length1(self):
+        lengthofpoints = (((self.p1.x - self.p2.x) ** 2) + ((self.p1.y - self.p2.y) ** 2)) ** 0.5
+        return lengthofpoints
+    
+    #option 2
+    def length(self):
+        lengthofpoints = self.p1.distance(self.p2)
+        return lengthofpoints
+
 
 print("----------------------------------------------------------")
